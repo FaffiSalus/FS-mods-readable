@@ -13,14 +13,12 @@
       <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.0-preview1.26124.5" />
       <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="181.25.0" />
       <PackageReference Include="Mutagen.Bethesda.Core" Version="0.55.0-alpha.1" />
+      <PackageReference Include="Mutagen.Bethesda.Skyrim" Version="0.54.0-alpha.90" />
     </ItemGroup>
 
     <ItemGroup>
       <None Update="SQLScripts\Testening.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-      <None Update="SQLScripts\Something.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
 

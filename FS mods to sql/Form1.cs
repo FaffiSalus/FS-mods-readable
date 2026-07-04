@@ -1,19 +1,17 @@
-using System.ComponentModel;
-using System.Data;
-using Microsoft.Data.SqlClient;
-using System.IO;
+using FS_mods_to_sql.Core;
+using FS_mods_to_sql.Skyrim;
 
 namespace FS_mods_to_sql;
 
 public partial class Form1 : Form
 {
-    private FolderBrowserDialog folderBrowserDialog1;
-    string filePath = string.Empty;
+    private readonly FolderBrowserDialog _folderBrowserDialog1;
+    private string _filePath = string.Empty;
     
     public Form1()
     {
         InitializeComponent();
-        this.folderBrowserDialog1 = new FolderBrowserDialog();
+        this._folderBrowserDialog1 = new FolderBrowserDialog();
     }
 
     private void btnCreateDatabase_Click(object sender, EventArgs e)
@@ -26,7 +24,7 @@ public partial class Form1 : Form
             dir = this.textboxDirectory.Text;
         }
         
-        CreateDatabase.create(server, db, dir);
+        CreateDatabase.Create(server, db, dir);
     }
 
     private void btnFileThingy_Click(object sender, EventArgs e)
@@ -34,12 +32,18 @@ public partial class Form1 : Form
         var fileContent = string.Empty;
 
         // Show the FolderBrowserDialog.
-        DialogResult result = folderBrowserDialog1.ShowDialog();
+        DialogResult result = _folderBrowserDialog1.ShowDialog();
         if (result == DialogResult.OK)
         {
-            filePath = folderBrowserDialog1.SelectedPath;
-            this.textboxDirectory.Text = filePath;
+            _filePath = _folderBrowserDialog1.SelectedPath;
+            this.textboxDirectory.Text = _filePath;
         }
     }
 
+    private void btnFillTables_Click(object sender, EventArgs e)
+    {
+        String server = this.textboxServer.Text;
+        String db = this.textboxDBName.Text;
+        GetData.FillWeapons(server, db);
+    }
 }

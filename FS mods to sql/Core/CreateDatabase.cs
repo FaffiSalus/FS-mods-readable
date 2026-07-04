@@ -1,21 +1,18 @@
-using System.Data;
-using Microsoft.Data.SqlClient;
+namespace FS_mods_to_sql.Core;
 
-namespace FS_mods_to_sql;
-
-public class CreateDatabase
+public static class CreateDatabase
 {
-    public static void create(String server, String db, String dir)
+    public static void Create(string server, string db, string dir)
     {
         SqlConnection myConn = new SqlConnection ("Server=" + server + ";Integrated security=SSPI;database=master");
-        String str = "CREATE DATABASE " + db + " ON PRIMARY " +
+        string str = "CREATE DATABASE " + db + " ON PRIMARY " +
                       "(NAME = " + db + ", " +
                       "FILENAME = '" + dir + "\\" + db + "Data.mdf', " +
-                      "SIZE = 2MB, MAXSIZE = 10MB, FILEGROWTH = 10%)" +
+                      "SIZE = 2GB, MAXSIZE = 10GB, FILEGROWTH = 10%)" +
                       "LOG ON (NAME = " + db + "_Log, " +
                       "FILENAME = '" + dir + "\\" + db + "Log.ldf', " +
-                      "SIZE = 1MB, " +
-                      "MAXSIZE = 5MB, " +
+                      "SIZE = 1GB, " +
+                      "MAXSIZE = 5GB, " +
                       "FILEGROWTH = 10%)";
 
         SqlCommand myCommand = new SqlCommand(str, myConn);
@@ -24,7 +21,6 @@ public class CreateDatabase
             myConn.Open();
             myCommand.ExecuteNonQuery();
             MessageBox.Show("DataBase is Created Successfully", "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            CreateTables.createAllTables(myConn, db);
         }
         catch (System.Exception ex)
         {
