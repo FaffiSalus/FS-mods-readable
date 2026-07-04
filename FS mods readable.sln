@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FS mods to sql", "FS mods to sql\FS mods to sql.csproj", "{7BE200D5-F48E-4985-B769-6C782BC4FECE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FS mods readable", "..\FS mods readable\FS mods readable\FS mods readable.csproj", "{576287E9-63E2-4C31-A146-55DC96A99494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7BE200D5-F48E-4985-B769-6C782BC4FECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BE200D5-F48E-4985-B769-6C782BC4FECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BE200D5-F48E-4985-B769-6C782BC4FECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BE200D5-F48E-4985-B769-6C782BC4FECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{576287E9-63E2-4C31-A146-55DC96A99494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576287E9-63E2-4C31-A146-55DC96A99494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576287E9-63E2-4C31-A146-55DC96A99494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576287E9-63E2-4C31-A146-55DC96A99494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
