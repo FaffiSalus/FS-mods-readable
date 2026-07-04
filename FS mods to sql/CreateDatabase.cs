@@ -24,6 +24,7 @@ public class CreateDatabase
             myConn.Open();
             myCommand.ExecuteNonQuery();
             MessageBox.Show("DataBase is Created Successfully", "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CreateTables.createAllTables(myConn, db);
         }
         catch (System.Exception ex)
         {
