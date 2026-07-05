@@ -6,7 +6,6 @@ public static class CreateDataTable
     {
         DataTable dataTable = new DataTable();
         bool firstRun = true;
-        int counter = 0;
         foreach (var rec in recordGetters)
         {
             if (firstRun)
@@ -28,9 +27,7 @@ public static class CreateDataTable
                 i++;
             }
             dataTable.Rows.Add(fieldData);
-            counter++;
         }
-        MessageBox.Show(counter.ToString());
         return dataTable;
     }
 }

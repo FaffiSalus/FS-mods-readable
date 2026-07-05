@@ -11,11 +11,11 @@ public static class CreateAndFillTables
         {
             conn.Open();
             myCommand.ExecuteNonQuery();
-            MessageBox.Show("Table is Created Successfully", "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            File.AppendAllText(Directory.GetCurrentDirectory() + "\\log.txt", DateTime.Now.ToShortTimeString() + ": Table " + tableName + " created \n");
         }
         catch (System.Exception ex)
         {
-            MessageBox.Show(ex.ToString(), "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            File.AppendAllText(Directory.GetCurrentDirectory() + "\\log.txt", DateTime.Now.ToShortTimeString() + ": " + ex.ToString() + "\n");
         }
         finally
         {
@@ -32,12 +32,14 @@ public static class CreateAndFillTables
         dbConnection.Open();
         using SqlBulkCopy s = new SqlBulkCopy(dbConnection);
         s.DestinationTableName = tableName;
+        s.BulkCopyTimeout = 0;
         s.WriteToServer(table);
+        File.AppendAllText(Directory.GetCurrentDirectory() + "\\log.txt", DateTime.Now.ToShortTimeString() + ": Filled Table " + tableName + " with " + table.Rows.Count + " records \n");
     }
 
     private static string GetCreateScript(string tableName, DataTable table)
     {
-        var sqlsc = "CREATE TABLE " + tableName + "(";
+        var sqlsc = "DROP TABLE IF EXISTS " + tableName + ";\n CREATE TABLE " + tableName + "(";
         for (int i = 0; i < table.Columns.Count; i++)
         {
             sqlsc += "\n [" + table.Columns[i].ColumnName + "] ";

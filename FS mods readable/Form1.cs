@@ -30,14 +30,11 @@ public partial class Form1 : Form
 
     private void btnFileThingy_Click(object sender, EventArgs e)
     {
-        var fileContent = string.Empty;
-
-        // Show the FolderBrowserDialog.
         DialogResult result = _folderBrowserDialog1.ShowDialog();
         if (result == DialogResult.OK)
         {
             _filePath = _folderBrowserDialog1.SelectedPath;
-            this.textboxDirectory.Text = _filePath;
+            textboxDirectory.Text = _filePath;
         }
     }
 
@@ -45,6 +42,6 @@ public partial class Form1 : Form
     {
         String server = this.textboxServer.Text;
         String db = this.textboxDBName.Text;
-        Skyrim2Sql.FillWeapons(server, db);
+        Skyrim2Sql.FillAllTables(server, db);
     }
 }
