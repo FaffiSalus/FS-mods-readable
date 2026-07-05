@@ -23,7 +23,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Core\CSV\" />
       <Folder Include="Core\Excel\" />
       <Folder Include="Core\GoogleSheets\" />
       <Folder Include="Core\XML\" />
