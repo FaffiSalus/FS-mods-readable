@@ -44,4 +44,15 @@ public partial class Form1 : Form
         String db = this.textboxDBName.Text;
         Skyrim2Sql.FillAllTables(server, db);
     }
+
+    private void btnCreateCSV_Click(object sender, EventArgs e)
+    {
+        if (textboxDirectory.Text == String.Empty)
+        {
+            throw new Exception("Please specify a directory path");
+        }
+
+        Skyrim2Csv.FillAllFiles(textboxDirectory.Text);
+    }
+
 }

@@ -39,13 +39,14 @@ partial class Form1
         label3 = new System.Windows.Forms.Label();
         textboxDBName = new System.Windows.Forms.TextBox();
         btnFillTables = new System.Windows.Forms.Button();
+        btnCreateCSV = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // btnCreateDatabase
         // 
-        btnCreateDatabase.Location = new System.Drawing.Point(6, 140);
+        btnCreateDatabase.Location = new System.Drawing.Point(12, 131);
         btnCreateDatabase.Name = "btnCreateDatabase";
-        btnCreateDatabase.Size = new System.Drawing.Size(125, 34);
+        btnCreateDatabase.Size = new System.Drawing.Size(113, 34);
         btnCreateDatabase.TabIndex = 4;
         btnCreateDatabase.Text = "Create Database";
         btnCreateDatabase.UseVisualStyleBackColor = true;
@@ -57,9 +58,9 @@ partial class Form1
         // 
         // btnFileThingy
         // 
-        btnFileThingy.Location = new System.Drawing.Point(6, 111);
+        btnFileThingy.Location = new System.Drawing.Point(12, 102);
         btnFileThingy.Name = "btnFileThingy";
-        btnFileThingy.Size = new System.Drawing.Size(125, 23);
+        btnFileThingy.Size = new System.Drawing.Size(113, 23);
         btnFileThingy.TabIndex = 3;
         btnFileThingy.Text = "Choose Directory";
         btnFileThingy.UseVisualStyleBackColor = true;
@@ -67,38 +68,38 @@ partial class Form1
         // 
         // textboxDirectory
         // 
-        textboxDirectory.Location = new System.Drawing.Point(112, 51);
+        textboxDirectory.Location = new System.Drawing.Point(118, 42);
         textboxDirectory.Name = "textboxDirectory";
         textboxDirectory.ReadOnly = true;
-        textboxDirectory.Size = new System.Drawing.Size(100, 23);
+        textboxDirectory.Size = new System.Drawing.Size(88, 23);
         textboxDirectory.TabIndex = 3;
         // 
         // label1
         // 
-        label1.Location = new System.Drawing.Point(6, 51);
+        label1.Location = new System.Drawing.Point(12, 42);
         label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(100, 23);
+        label1.Size = new System.Drawing.Size(88, 23);
         label1.TabIndex = 4;
         label1.Text = "Directory";
         // 
         // label2
         // 
-        label2.Location = new System.Drawing.Point(6, 18);
+        label2.Location = new System.Drawing.Point(12, 9);
         label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(100, 23);
+        label2.Size = new System.Drawing.Size(88, 23);
         label2.TabIndex = 5;
         label2.Text = "Servername";
         // 
         // textboxServer
         // 
-        textboxServer.Location = new System.Drawing.Point(112, 18);
+        textboxServer.Location = new System.Drawing.Point(118, 9);
         textboxServer.Name = "textboxServer";
-        textboxServer.Size = new System.Drawing.Size(100, 23);
+        textboxServer.Size = new System.Drawing.Size(88, 23);
         textboxServer.TabIndex = 1;
         // 
         // label3
         // 
-        label3.Location = new System.Drawing.Point(299, 18);
+        label3.Location = new System.Drawing.Point(229, 12);
         label3.Name = "label3";
         label3.Size = new System.Drawing.Size(100, 23);
         label3.TabIndex = 7;
@@ -106,39 +107,52 @@ partial class Form1
         // 
         // textboxDBName
         // 
-        textboxDBName.Location = new System.Drawing.Point(389, 18);
+        textboxDBName.Location = new System.Drawing.Point(319, 12);
         textboxDBName.Name = "textboxDBName";
         textboxDBName.Size = new System.Drawing.Size(100, 23);
         textboxDBName.TabIndex = 2;
         // 
         // btnFillTables
         // 
-        btnFillTables.Location = new System.Drawing.Point(6, 180);
+        btnFillTables.Location = new System.Drawing.Point(12, 171);
         btnFillTables.Name = "btnFillTables";
-        btnFillTables.Size = new System.Drawing.Size(125, 36);
+        btnFillTables.Size = new System.Drawing.Size(113, 36);
         btnFillTables.TabIndex = 5;
         btnFillTables.Text = "FillTables";
         btnFillTables.UseVisualStyleBackColor = true;
         btnFillTables.Click += btnFillTables_Click;
+        // 
+        // btnCreateCSV
+        // 
+        btnCreateCSV.Location = new System.Drawing.Point(167, 102);
+        btnCreateCSV.Name = "btnCreateCSV";
+        btnCreateCSV.Size = new System.Drawing.Size(75, 23);
+        btnCreateCSV.TabIndex = 8;
+        btnCreateCSV.Text = "Create CSV";
+        btnCreateCSV.UseVisualStyleBackColor = true;
+        btnCreateCSV.Click += btnCreateCSV_Click;
         // 
         // Form1
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(800, 450);
-        Controls.Add(btnFillTables);
-        Controls.Add(textboxDBName);
-        Controls.Add(label3);
+        Controls.Add(btnCreateCSV);
         Controls.Add(textboxServer);
+        Controls.Add(textboxDBName);
         Controls.Add(label2);
+        Controls.Add(btnFillTables);
         Controls.Add(label1);
+        Controls.Add(label3);
         Controls.Add(textboxDirectory);
-        Controls.Add(btnFileThingy);
         Controls.Add(btnCreateDatabase);
-        Text = "Form1";
+        Controls.Add(btnFileThingy);
+        Text = "Readable Mods";
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.Button btnCreateCSV;
 
     private System.Windows.Forms.Button btnFillTables;
 

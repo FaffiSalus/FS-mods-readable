@@ -162,1227 +162,1227 @@ public static class Skyrim2Sql
         FillWorldspace(server, db);
     }
     
-    public static void FillWeapons(string server, string db)
-    {
-        const string tablename = "[dbo].[Weapon]";
-        DataTable dataTable = GetData.GetWeapon();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
-    }
-
     public static void FillAcousticSpace(string server, string db)
     {
-        const string tablename = "[dbo].[AcousticSpace]";
-        DataTable dataTable = GetData.GetAcousticSpace();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[AcousticSpace]";
+        DataTable dataTable = GetSkyrimData.GetAcousticSpace();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillActionRecord(string server, string db)
     {
-        const string tablename = "[dbo].[ActionRecord]";
-        DataTable dataTable = GetData.GetActionRecord();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ActionRecord]";
+        DataTable dataTable = GetSkyrimData.GetActionRecord();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillActivator(string server, string db)
     {
-        const string tablename = "[dbo].[Activator]";
-        DataTable dataTable = GetData.GetActivator();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Activator]";
+        DataTable dataTable = GetSkyrimData.GetActivator();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillActorValueInformation(string server, string db)
     {
-        const string tablename = "[dbo].[ActorValueInformation]";
-        DataTable dataTable = GetData.GetActorValueInformation();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ActorValueInformation]";
+        DataTable dataTable = GetSkyrimData.GetActorValueInformation();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillAddonNode(string server, string db)
     {
-        const string tablename = "[dbo].[AddonNode]";
-        DataTable dataTable = GetData.GetAddonNode();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[AddonNode]";
+        DataTable dataTable = GetSkyrimData.GetAddonNode();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillAlchemicalApparatus(string server, string db)
     {
-        const string tablename = "[dbo].[AlchemicalApparatus]";
-        DataTable dataTable = GetData.GetAlchemicalApparatus();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[AlchemicalApparatus]";
+        DataTable dataTable = GetSkyrimData.GetAlchemicalApparatus();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillAmmunition(string server, string db)
     {
-        const string tablename = "[dbo].[Ammunition]";
-        DataTable dataTable = GetData.GetAmmunition();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Ammunition]";
+        DataTable dataTable = GetSkyrimData.GetAmmunition();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillAnimatedObject(string server, string db)
     {
-        const string tablename = "[dbo].[AnimatedObject]";
-        DataTable dataTable = GetData.GetAnimatedObject();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[AnimatedObject]";
+        DataTable dataTable = GetSkyrimData.GetAnimatedObject();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillAPlacedTrap(string server, string db)
     {
-        const string tablename = "[dbo].[APlacedTrap]";
-        DataTable dataTable = GetData.GetAPlacedTrap();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[APlacedTrap]";
+        DataTable dataTable = GetSkyrimData.GetAPlacedTrap();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillArmor(string server, string db)
     {
-        const string tablename = "[dbo].[Armor]";
-        DataTable dataTable = GetData.GetArmor();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Armor]";
+        DataTable dataTable = GetSkyrimData.GetArmor();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillArmorAddon(string server, string db)
     {
-        const string tablename = "[dbo].[ArmorAddon]";
-        DataTable dataTable = GetData.GetArmorAddon();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ArmorAddon]";
+        DataTable dataTable = GetSkyrimData.GetArmorAddon();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillArtObject(string server, string db)
     {
-        const string tablename = "[dbo].[ArtObject]";
-        DataTable dataTable = GetData.GetArtObject();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ArtObject]";
+        DataTable dataTable = GetSkyrimData.GetArtObject();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillAssociationType(string server, string db)
     {
-        const string tablename = "[dbo].[AssociationType]";
-        DataTable dataTable = GetData.GetAssociationType();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[AssociationType]";
+        DataTable dataTable = GetSkyrimData.GetAssociationType();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillAStoryManagerNode(string server, string db)
     {
-        const string tablename = "[dbo].[AStoryManagerNode]";
-        DataTable dataTable = GetData.GetAStoryManagerNode();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[AStoryManagerNode]";
+        DataTable dataTable = GetSkyrimData.GetAStoryManagerNode();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillBodyPartData(string server, string db)
     {
-        const string tablename = "[dbo].[BodyPartData]";
-        DataTable dataTable = GetData.GetBodyPartData();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[BodyPartData]";
+        DataTable dataTable = GetSkyrimData.GetBodyPartData();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillBook(string server, string db)
     {
-        const string tablename = "[dbo].[Book]";
-        DataTable dataTable = GetData.GetBook();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Book]";
+        DataTable dataTable = GetSkyrimData.GetBook();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillCameraPath(string server, string db)
     {
-        const string tablename = "[dbo].[CameraPath]";
-        DataTable dataTable = GetData.GetCameraPath();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[CameraPath]";
+        DataTable dataTable = GetSkyrimData.GetCameraPath();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillCameraShot(string server, string db)
     {
-        const string tablename = "[dbo].[CameraShot]";
-        DataTable dataTable = GetData.GetCameraShot();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[CameraShot]";
+        DataTable dataTable = GetSkyrimData.GetCameraShot();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillCell(string server, string db)
     {
-        const string tablename = "[dbo].[Cell]";
-        DataTable dataTable = GetData.GetCell();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Cell]";
+        DataTable dataTable = GetSkyrimData.GetCell();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillClass(string server, string db)
     {
-        const string tablename = "[dbo].[Class]";
-        DataTable dataTable = GetData.GetClass();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Class]";
+        DataTable dataTable = GetSkyrimData.GetClass();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillClimate(string server, string db)
     {
-        const string tablename = "[dbo].[Climate]";
-        DataTable dataTable = GetData.GetClimate();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Climate]";
+        DataTable dataTable = GetSkyrimData.GetClimate();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillCollisionLayer(string server, string db)
     {
-        const string tablename = "[dbo].[CollisionLayer]";
-        DataTable dataTable = GetData.GetCollisionLayer();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[CollisionLayer]";
+        DataTable dataTable = GetSkyrimData.GetCollisionLayer();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillColorRecord(string server, string db)
     {
-        const string tablename = "[dbo].[ColorRecord]";
-        DataTable dataTable = GetData.GetColorRecord();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ColorRecord]";
+        DataTable dataTable = GetSkyrimData.GetColorRecord();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillCombatStyle(string server, string db)
     {
-        const string tablename = "[dbo].[CombatStyle]";
-        DataTable dataTable = GetData.GetCombatStyle();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[CombatStyle]";
+        DataTable dataTable = GetSkyrimData.GetCombatStyle();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillConstructibleObject(string server, string db)
     {
-        const string tablename = "[dbo].[ConstructibleObject]";
-        DataTable dataTable = GetData.GetConstructibleObject();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ConstructibleObject]";
+        DataTable dataTable = GetSkyrimData.GetConstructibleObject();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillContainer(string server, string db)
     {
-        const string tablename = "[dbo].[Container]";
-        DataTable dataTable = GetData.GetContainer();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Container]";
+        DataTable dataTable = GetSkyrimData.GetContainer();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillDebris(string server, string db)
     {
-        const string tablename = "[dbo].[Debris]";
-        DataTable dataTable = GetData.GetDebris();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Debris]";
+        DataTable dataTable = GetSkyrimData.GetDebris();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillDefaultObjectManager(string server, string db)
     {
-        const string tablename = "[dbo].[DefaultObjectManager]";
-        DataTable dataTable = GetData.GetDefaultObjectManager();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[DefaultObjectManager]";
+        DataTable dataTable = GetSkyrimData.GetDefaultObjectManager();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillDialogBranch(string server, string db)
     {
-        const string tablename = "[dbo].[DialogBranch]";
-        DataTable dataTable = GetData.GetDialogBranch();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[DialogBranch]";
+        DataTable dataTable = GetSkyrimData.GetDialogBranch();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillDialogResponses(string server, string db)
     {
-        const string tablename = "[dbo].[DialogResponses]";
-        DataTable dataTable = GetData.GetDialogResponses();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[DialogResponses]";
+        DataTable dataTable = GetSkyrimData.GetDialogResponses();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillDialogTopic(string server, string db)
     {
-        const string tablename = "[dbo].[DialogTopic]";
-        DataTable dataTable = GetData.GetDialogTopic();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[DialogTopic]";
+        DataTable dataTable = GetSkyrimData.GetDialogTopic();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillDialogView(string server, string db)
     {
-        const string tablename = "[dbo].[DialogView]";
-        DataTable dataTable = GetData.GetDialogView();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[DialogView]";
+        DataTable dataTable = GetSkyrimData.GetDialogView();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillDoor(string server, string db)
     {
-        const string tablename = "[dbo].[Door]";
-        DataTable dataTable = GetData.GetDoor();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Door]";
+        DataTable dataTable = GetSkyrimData.GetDoor();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillDualCastData(string server, string db)
     {
-        const string tablename = "[dbo].[DualCastData]";
-        DataTable dataTable = GetData.GetDualCastData();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[DualCastData]";
+        DataTable dataTable = GetSkyrimData.GetDualCastData();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillEffectShader(string server, string db)
     {
-        const string tablename = "[dbo].[EffectShader]";
-        DataTable dataTable = GetData.GetEffectShader();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[EffectShader]";
+        DataTable dataTable = GetSkyrimData.GetEffectShader();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillEncounterZone(string server, string db)
     {
-        const string tablename = "[dbo].[EncounterZone]";
-        DataTable dataTable = GetData.GetEncounterZone();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[EncounterZone]";
+        DataTable dataTable = GetSkyrimData.GetEncounterZone();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillEquipType(string server, string db)
     {
-        const string tablename = "[dbo].[EquipType]";
-        DataTable dataTable = GetData.GetEquipType();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[EquipType]";
+        DataTable dataTable = GetSkyrimData.GetEquipType();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillExplosion(string server, string db)
     {
-        const string tablename = "[dbo].[Explosion]";
-        DataTable dataTable = GetData.GetExplosion();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Explosion]";
+        DataTable dataTable = GetSkyrimData.GetExplosion();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillEyes(string server, string db)
     {
-        const string tablename = "[dbo].[Eyes]";
-        DataTable dataTable = GetData.GetEyes();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Eyes]";
+        DataTable dataTable = GetSkyrimData.GetEyes();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillFaction(string server, string db)
     {
-        const string tablename = "[dbo].[Faction]";
-        DataTable dataTable = GetData.GetFaction();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Faction]";
+        DataTable dataTable = GetSkyrimData.GetFaction();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillFlora(string server, string db)
     {
-        const string tablename = "[dbo].[Flora]";
-        DataTable dataTable = GetData.GetFlora();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Flora]";
+        DataTable dataTable = GetSkyrimData.GetFlora();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillFootstep(string server, string db)
     {
-        const string tablename = "[dbo].[Footstep]";
-        DataTable dataTable = GetData.GetFootstep();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Footstep]";
+        DataTable dataTable = GetSkyrimData.GetFootstep();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillFootstepSet(string server, string db)
     {
-        const string tablename = "[dbo].[FootstepSet]";
-        DataTable dataTable = GetData.GetFootstepSet();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[FootstepSet]";
+        DataTable dataTable = GetSkyrimData.GetFootstepSet();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillFormList(string server, string db)
     {
-        const string tablename = "[dbo].[FormList]";
-        DataTable dataTable = GetData.GetFormList();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[FormList]";
+        DataTable dataTable = GetSkyrimData.GetFormList();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillFurniture(string server, string db)
     {
-        const string tablename = "[dbo].[Furniture]";
-        DataTable dataTable = GetData.GetFurniture();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Furniture]";
+        DataTable dataTable = GetSkyrimData.GetFurniture();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillGameSetting(string server, string db)
     {
-        const string tablename = "[dbo].[GameSetting]";
-        DataTable dataTable = GetData.GetGameSetting();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[GameSetting]";
+        DataTable dataTable = GetSkyrimData.GetGameSetting();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillGlobal(string server, string db)
     {
-        const string tablename = "[dbo].[Global]";
-        DataTable dataTable = GetData.GetGlobal();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Global]";
+        DataTable dataTable = GetSkyrimData.GetGlobal();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillGrass(string server, string db)
     {
-        const string tablename = "[dbo].[Grass]";
-        DataTable dataTable = GetData.GetGrass();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Grass]";
+        DataTable dataTable = GetSkyrimData.GetGrass();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillHair(string server, string db)
     {
-        const string tablename = "[dbo].[Hair]";
-        DataTable dataTable = GetData.GetHair();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Hair]";
+        DataTable dataTable = GetSkyrimData.GetHair();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillHazard(string server, string db)
     {
-        const string tablename = "[dbo].[Hazard]";
-        DataTable dataTable = GetData.GetHazard();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Hazard]";
+        DataTable dataTable = GetSkyrimData.GetHazard();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillHeadPart(string server, string db)
     {
-        const string tablename = "[dbo].[HeadPart]";
-        DataTable dataTable = GetData.GetHeadPart();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[HeadPart]";
+        DataTable dataTable = GetSkyrimData.GetHeadPart();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIAliasVoiceType(string server, string db)
     {
-        const string tablename = "[dbo].[IAliasVoiceType]";
-        DataTable dataTable = GetData.GetIAliasVoiceType();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IAliasVoiceType]";
+        DataTable dataTable = GetSkyrimData.GetIAliasVoiceType();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIBindableEquipment(string server, string db)
     {
-        const string tablename = "[dbo].[IBindableEquipment]";
-        DataTable dataTable = GetData.GetIBindableEquipment();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IBindableEquipment]";
+        DataTable dataTable = GetSkyrimData.GetIBindableEquipment();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIComplexLocation(string server, string db)
     {
-        const string tablename = "[dbo].[IComplexLocation]";
-        DataTable dataTable = GetData.GetIComplexLocation();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IComplexLocation]";
+        DataTable dataTable = GetSkyrimData.GetIComplexLocation();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIConstructible(string server, string db)
     {
-        const string tablename = "[dbo].[IConstructible]";
-        DataTable dataTable = GetData.GetIConstructible();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IConstructible]";
+        DataTable dataTable = GetSkyrimData.GetIConstructible();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIdleAnimation(string server, string db)
     {
-        const string tablename = "[dbo].[IdleAnimation]";
-        DataTable dataTable = GetData.GetIdleAnimation();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IdleAnimation]";
+        DataTable dataTable = GetSkyrimData.GetIdleAnimation();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIdleMarker(string server, string db)
     {
-        const string tablename = "[dbo].[IdleMarker]";
-        DataTable dataTable = GetData.GetIdleMarker();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IdleMarker]";
+        DataTable dataTable = GetSkyrimData.GetIdleMarker();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIEffectRecord(string server, string db)
     {
-        const string tablename = "[dbo].[IEffectRecord]";
-        DataTable dataTable = GetData.GetIEffectRecord();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IEffectRecord]";
+        DataTable dataTable = GetSkyrimData.GetIEffectRecord();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIEmittance(string server, string db)
     {
-        const string tablename = "[dbo].[IEmittance]";
-        DataTable dataTable = GetData.GetIEmittance();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IEmittance]";
+        DataTable dataTable = GetSkyrimData.GetIEmittance();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIExplodeSpawn(string server, string db)
     {
-        const string tablename = "[dbo].[IExplodeSpawn]";
-        DataTable dataTable = GetData.GetIExplodeSpawn();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IExplodeSpawn]";
+        DataTable dataTable = GetSkyrimData.GetIExplodeSpawn();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIHarvestTarget(string server, string db)
     {
-        const string tablename = "[dbo].[IHarvestTarget]";
-        DataTable dataTable = GetData.GetIHarvestTarget();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IHarvestTarget]";
+        DataTable dataTable = GetSkyrimData.GetIHarvestTarget();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIIdleRelation(string server, string db)
     {
-        const string tablename = "[dbo].[IIdleRelation]";
-        DataTable dataTable = GetData.GetIIdleRelation();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IIdleRelation]";
+        DataTable dataTable = GetSkyrimData.GetIIdleRelation();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIItem(string server, string db)
     {
-        const string tablename = "[dbo].[IItem]";
-        DataTable dataTable = GetData.GetIItem();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IItem]";
+        DataTable dataTable = GetSkyrimData.GetIItem();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIItemOrList(string server, string db)
     {
-        const string tablename = "[dbo].[IItemOrList]";
-        DataTable dataTable = GetData.GetIItemOrList();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IItemOrList]";
+        DataTable dataTable = GetSkyrimData.GetIItemOrList();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIKeywordLinkedReference(string server, string db)
     {
-        const string tablename = "[dbo].[IKeywordLinkedReference]";
-        DataTable dataTable = GetData.GetIKeywordLinkedReference();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IKeywordLinkedReference]";
+        DataTable dataTable = GetSkyrimData.GetIKeywordLinkedReference();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIKnowable(string server, string db)
     {
-        const string tablename = "[dbo].[IKnowable]";
-        DataTable dataTable = GetData.GetIKnowable();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IKnowable]";
+        DataTable dataTable = GetSkyrimData.GetIKnowable();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillILockList(string server, string db)
     {
-        const string tablename = "[dbo].[ILockList]";
-        DataTable dataTable = GetData.GetILockList();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ILockList]";
+        DataTable dataTable = GetSkyrimData.GetILockList();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillImageSpace(string server, string db)
     {
-        const string tablename = "[dbo].[ImageSpace]";
-        DataTable dataTable = GetData.GetImageSpace();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ImageSpace]";
+        DataTable dataTable = GetSkyrimData.GetImageSpace();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillImageSpaceAdapter(string server, string db)
     {
-        const string tablename = "[dbo].[ImageSpaceAdapter]";
-        DataTable dataTable = GetData.GetImageSpaceAdapter();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ImageSpaceAdapter]";
+        DataTable dataTable = GetSkyrimData.GetImageSpaceAdapter();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIMagicItem(string server, string db)
     {
-        const string tablename = "[dbo].[IMagicItem]";
-        DataTable dataTable = GetData.GetIMagicItem();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IMagicItem]";
+        DataTable dataTable = GetSkyrimData.GetIMagicItem();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillImpact(string server, string db)
     {
-        const string tablename = "[dbo].[Impact]";
-        DataTable dataTable = GetData.GetImpact();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Impact]";
+        DataTable dataTable = GetSkyrimData.GetImpact();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillImpactDataSet(string server, string db)
     {
-        const string tablename = "[dbo].[ImpactDataSet]";
-        DataTable dataTable = GetData.GetImpactDataSet();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ImpactDataSet]";
+        DataTable dataTable = GetSkyrimData.GetImpactDataSet();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIngestible(string server, string db)
     {
-        const string tablename = "[dbo].[Ingestible]";
-        DataTable dataTable = GetData.GetIngestible();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Ingestible]";
+        DataTable dataTable = GetSkyrimData.GetIngestible();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIngredient(string server, string db)
     {
-        const string tablename = "[dbo].[Ingredient]";
-        DataTable dataTable = GetData.GetIngredient();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Ingredient]";
+        DataTable dataTable = GetSkyrimData.GetIngredient();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillINpcOrList(string server, string db)
     {
-        const string tablename = "[dbo].[INpcOrList]";
-        DataTable dataTable = GetData.GetINpcOrList();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[INpcOrList]";
+        DataTable dataTable = GetSkyrimData.GetINpcOrList();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillINpcSpawn(string server, string db)
     {
-        const string tablename = "[dbo].[INpcSpawn]";
-        DataTable dataTable = GetData.GetINpcSpawn();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[INpcSpawn]";
+        DataTable dataTable = GetSkyrimData.GetINpcSpawn();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIObjectId(string server, string db)
     {
-        const string tablename = "[dbo].[IObjectId]";
-        DataTable dataTable = GetData.GetIObjectId();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IObjectId]";
+        DataTable dataTable = GetSkyrimData.GetIObjectId();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIOutfitTarget(string server, string db)
     {
-        const string tablename = "[dbo].[IOutfitTarget]";
-        DataTable dataTable = GetData.GetIOutfitTarget();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IOutfitTarget]";
+        DataTable dataTable = GetSkyrimData.GetIOutfitTarget();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIOwner(string server, string db)
     {
-        const string tablename = "[dbo].[IOwner]";
-        DataTable dataTable = GetData.GetIOwner();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IOwner]";
+        DataTable dataTable = GetSkyrimData.GetIOwner();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIPlaceableObject(string server, string db)
     {
-        const string tablename = "[dbo].[IPlaceableObject]";
-        DataTable dataTable = GetData.GetIPlaceableObject();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IPlaceableObject]";
+        DataTable dataTable = GetSkyrimData.GetIPlaceableObject();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIPlaced(string server, string db)
     {
-        const string tablename = "[dbo].[IPlaced]";
-        DataTable dataTable = GetData.GetIPlaced();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IPlaced]";
+        DataTable dataTable = GetSkyrimData.GetIPlaced();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIPlacedSimple(string server, string db)
     {
-        const string tablename = "[dbo].[IPlacedSimple]";
-        DataTable dataTable = GetData.GetIPlacedSimple();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IPlacedSimple]";
+        DataTable dataTable = GetSkyrimData.GetIPlacedSimple();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIPlacedThing(string server, string db)
     {
-        const string tablename = "[dbo].[IPlacedThing]";
-        DataTable dataTable = GetData.GetIPlacedThing();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IPlacedThing]";
+        DataTable dataTable = GetSkyrimData.GetIPlacedThing();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIPlacedTrapTarget(string server, string db)
     {
-        const string tablename = "[dbo].[IPlacedTrapTarget]";
-        DataTable dataTable = GetData.GetIPlacedTrapTarget();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IPlacedTrapTarget]";
+        DataTable dataTable = GetSkyrimData.GetIPlacedTrapTarget();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIReferenceableObject(string server, string db)
     {
-        const string tablename = "[dbo].[IReferenceableObject]";
-        DataTable dataTable = GetData.GetIReferenceableObject();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IReferenceableObject]";
+        DataTable dataTable = GetSkyrimData.GetIReferenceableObject();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIRegionTarget(string server, string db)
     {
-        const string tablename = "[dbo].[IRegionTarget]";
-        DataTable dataTable = GetData.GetIRegionTarget();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IRegionTarget]";
+        DataTable dataTable = GetSkyrimData.GetIRegionTarget();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIRelatable(string server, string db)
     {
-        const string tablename = "[dbo].[IRelatable]";
-        DataTable dataTable = GetData.GetIRelatable();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IRelatable]";
+        DataTable dataTable = GetSkyrimData.GetIRelatable();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillISound(string server, string db)
     {
-        const string tablename = "[dbo].[ISound]";
-        DataTable dataTable = GetData.GetISound();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ISound]";
+        DataTable dataTable = GetSkyrimData.GetISound();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillISpellOrList(string server, string db)
     {
-        const string tablename = "[dbo].[ISpellOrList]";
-        DataTable dataTable = GetData.GetISpellOrList();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ISpellOrList]";
+        DataTable dataTable = GetSkyrimData.GetISpellOrList();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillISpellRecord(string server, string db)
     {
-        const string tablename = "[dbo].[ISpellRecord]";
-        DataTable dataTable = GetData.GetISpellRecord();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ISpellRecord]";
+        DataTable dataTable = GetSkyrimData.GetISpellRecord();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIVoiceTypeOrList(string server, string db)
     {
-        const string tablename = "[dbo].[IVoiceTypeOrList]";
-        DataTable dataTable = GetData.GetIVoiceTypeOrList();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IVoiceTypeOrList]";
+        DataTable dataTable = GetSkyrimData.GetIVoiceTypeOrList();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIWeaponOrList(string server, string db)
     {
-        const string tablename = "[dbo].[IWeaponOrList]";
-        DataTable dataTable = GetData.GetIWeaponOrList();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IWeaponOrList]";
+        DataTable dataTable = GetSkyrimData.GetIWeaponOrList();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillIWorldspaceOrList(string server, string db)
     {
-        const string tablename = "[dbo].[IWorldspaceOrList]";
-        DataTable dataTable = GetData.GetIWorldspaceOrList();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[IWorldspaceOrList]";
+        DataTable dataTable = GetSkyrimData.GetIWorldspaceOrList();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillKey(string server, string db)
     {
-        const string tablename = "[dbo].[Key]";
-        DataTable dataTable = GetData.GetKey();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Key]";
+        DataTable dataTable = GetSkyrimData.GetKey();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillKeyword(string server, string db)
     {
-        const string tablename = "[dbo].[Keyword]";
-        DataTable dataTable = GetData.GetKeyword();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Keyword]";
+        DataTable dataTable = GetSkyrimData.GetKeyword();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLandscape(string server, string db)
     {
-        const string tablename = "[dbo].[Landscape]";
-        DataTable dataTable = GetData.GetLandscape();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Landscape]";
+        DataTable dataTable = GetSkyrimData.GetLandscape();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLandscapeTexture(string server, string db)
     {
-        const string tablename = "[dbo].[LandscapeTexture]";
-        DataTable dataTable = GetData.GetLandscapeTexture();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[LandscapeTexture]";
+        DataTable dataTable = GetSkyrimData.GetLandscapeTexture();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLensFlare(string server, string db)
     {
-        const string tablename = "[dbo].[LensFlare]";
-        DataTable dataTable = GetData.GetLensFlare();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[LensFlare]";
+        DataTable dataTable = GetSkyrimData.GetLensFlare();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLeveledItem(string server, string db)
     {
-        const string tablename = "[dbo].[LeveledItem]";
-        DataTable dataTable = GetData.GetLeveledItem();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[LeveledItem]";
+        DataTable dataTable = GetSkyrimData.GetLeveledItem();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLeveledNpc(string server, string db)
     {
-        const string tablename = "[dbo].[LeveledNpc]";
-        DataTable dataTable = GetData.GetLeveledNpc();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[LeveledNpc]";
+        DataTable dataTable = GetSkyrimData.GetLeveledNpc();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLeveledSpell(string server, string db)
     {
-        const string tablename = "[dbo].[LeveledSpell]";
-        DataTable dataTable = GetData.GetLeveledSpell();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[LeveledSpell]";
+        DataTable dataTable = GetSkyrimData.GetLeveledSpell();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLight(string server, string db)
     {
-        const string tablename = "[dbo].[Light]";
-        DataTable dataTable = GetData.GetLight();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Light]";
+        DataTable dataTable = GetSkyrimData.GetLight();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLightingTemplate(string server, string db)
     {
-        const string tablename = "[dbo].[LightingTemplate]";
-        DataTable dataTable = GetData.GetLightingTemplate();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[LightingTemplate]";
+        DataTable dataTable = GetSkyrimData.GetLightingTemplate();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLoadScreen(string server, string db)
     {
-        const string tablename = "[dbo].[LoadScreen]";
-        DataTable dataTable = GetData.GetLoadScreen();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[LoadScreen]";
+        DataTable dataTable = GetSkyrimData.GetLoadScreen();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLocation(string server, string db)
     {
-        const string tablename = "[dbo].[Location]";
-        DataTable dataTable = GetData.GetLocation();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Location]";
+        DataTable dataTable = GetSkyrimData.GetLocation();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillLocationReferenceType(string server, string db)
     {
-        const string tablename = "[dbo].[LocationReferenceType]";
-        DataTable dataTable = GetData.GetLocationReferenceType();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[LocationReferenceType]";
+        DataTable dataTable = GetSkyrimData.GetLocationReferenceType();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillMagicEffect(string server, string db)
     {
-        const string tablename = "[dbo].[MagicEffect]";
-        DataTable dataTable = GetData.GetMagicEffect();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[MagicEffect]";
+        DataTable dataTable = GetSkyrimData.GetMagicEffect();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillMaterialObject(string server, string db)
     {
-        const string tablename = "[dbo].[MaterialObject]";
-        DataTable dataTable = GetData.GetMaterialObject();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[MaterialObject]";
+        DataTable dataTable = GetSkyrimData.GetMaterialObject();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillMaterialType(string server, string db)
     {
-        const string tablename = "[dbo].[MaterialType]";
-        DataTable dataTable = GetData.GetMaterialType();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[MaterialType]";
+        DataTable dataTable = GetSkyrimData.GetMaterialType();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillMessage(string server, string db)
     {
-        const string tablename = "[dbo].[Message]";
-        DataTable dataTable = GetData.GetMessage();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Message]";
+        DataTable dataTable = GetSkyrimData.GetMessage();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillMiscItem(string server, string db)
     {
-        const string tablename = "[dbo].[MiscItem]";
-        DataTable dataTable = GetData.GetMiscItem();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[MiscItem]";
+        DataTable dataTable = GetSkyrimData.GetMiscItem();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillMoveableStatic(string server, string db)
     {
-        const string tablename = "[dbo].[MoveableStatic]";
-        DataTable dataTable = GetData.GetMoveableStatic();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[MoveableStatic]";
+        DataTable dataTable = GetSkyrimData.GetMoveableStatic();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillMovementType(string server, string db)
     {
-        const string tablename = "[dbo].[MovementType]";
-        DataTable dataTable = GetData.GetMovementType();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[MovementType]";
+        DataTable dataTable = GetSkyrimData.GetMovementType();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillMusicTrack(string server, string db)
     {
-        const string tablename = "[dbo].[MusicTrack]";
-        DataTable dataTable = GetData.GetMusicTrack();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[MusicTrack]";
+        DataTable dataTable = GetSkyrimData.GetMusicTrack();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillMusicType(string server, string db)
     {
-        const string tablename = "[dbo].[MusicType]";
-        DataTable dataTable = GetData.GetMusicType();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[MusicType]";
+        DataTable dataTable = GetSkyrimData.GetMusicType();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillNavigationMesh(string server, string db)
     {
-        const string tablename = "[dbo].[NavigationMesh]";
-        DataTable dataTable = GetData.GetNavigationMesh();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[NavigationMesh]";
+        DataTable dataTable = GetSkyrimData.GetNavigationMesh();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillNavigationMeshInfoMap(string server, string db)
     {
-        const string tablename = "[dbo].[NavigationMeshInfoMap]";
-        DataTable dataTable = GetData.GetNavigationMeshInfoMap();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[NavigationMeshInfoMap]";
+        DataTable dataTable = GetSkyrimData.GetNavigationMeshInfoMap();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillNpc(string server, string db)
     {
-        const string tablename = "[dbo].[Npc]";
-        DataTable dataTable = GetData.GetNpc();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Npc]";
+        DataTable dataTable = GetSkyrimData.GetNpc();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillObjectEffect(string server, string db)
     {
-        const string tablename = "[dbo].[ObjectEffect]";
-        DataTable dataTable = GetData.GetObjectEffect();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ObjectEffect]";
+        DataTable dataTable = GetSkyrimData.GetObjectEffect();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillOutfit(string server, string db)
     {
-        const string tablename = "[dbo].[Outfit]";
-        DataTable dataTable = GetData.GetOutfit();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Outfit]";
+        DataTable dataTable = GetSkyrimData.GetOutfit();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillPackage(string server, string db)
     {
-        const string tablename = "[dbo].[Package]";
-        DataTable dataTable = GetData.GetPackage();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Package]";
+        DataTable dataTable = GetSkyrimData.GetPackage();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillPerk(string server, string db)
     {
-        const string tablename = "[dbo].[Perk]";
-        DataTable dataTable = GetData.GetPerk();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Perk]";
+        DataTable dataTable = GetSkyrimData.GetPerk();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillPlacedNpc(string server, string db)
     {
-        const string tablename = "[dbo].[PlacedNpc]";
-        DataTable dataTable = GetData.GetPlacedNpc();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[PlacedNpc]";
+        DataTable dataTable = GetSkyrimData.GetPlacedNpc();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillPlacedObject(string server, string db)
     {
-        const string tablename = "[dbo].[PlacedObject]";
-        DataTable dataTable = GetData.GetPlacedObject();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[PlacedObject]";
+        DataTable dataTable = GetSkyrimData.GetPlacedObject();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillProjectile(string server, string db)
     {
-        const string tablename = "[dbo].[Projectile]";
-        DataTable dataTable = GetData.GetProjectile();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Projectile]";
+        DataTable dataTable = GetSkyrimData.GetProjectile();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillQuest(string server, string db)
     {
-        const string tablename = "[dbo].[Quest]";
-        DataTable dataTable = GetData.GetQuest();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Quest]";
+        DataTable dataTable = GetSkyrimData.GetQuest();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillRace(string server, string db)
     {
-        const string tablename = "[dbo].[Race]";
-        DataTable dataTable = GetData.GetRace();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Race]";
+        DataTable dataTable = GetSkyrimData.GetRace();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillRegion(string server, string db)
     {
-        const string tablename = "[dbo].[Region]";
-        DataTable dataTable = GetData.GetRegion();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Region]";
+        DataTable dataTable = GetSkyrimData.GetRegion();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillRelationship(string server, string db)
     {
-        const string tablename = "[dbo].[Relationship]";
-        DataTable dataTable = GetData.GetRelationship();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Relationship]";
+        DataTable dataTable = GetSkyrimData.GetRelationship();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillReverbParameters(string server, string db)
     {
-        const string tablename = "[dbo].[ReverbParameters]";
-        DataTable dataTable = GetData.GetReverbParameters();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ReverbParameters]";
+        DataTable dataTable = GetSkyrimData.GetReverbParameters();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillScene(string server, string db)
     {
-        const string tablename = "[dbo].[Scene]";
-        DataTable dataTable = GetData.GetScene();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Scene]";
+        DataTable dataTable = GetSkyrimData.GetScene();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillScroll(string server, string db)
     {
-        const string tablename = "[dbo].[Scroll]";
-        DataTable dataTable = GetData.GetScroll();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Scroll]";
+        DataTable dataTable = GetSkyrimData.GetScroll();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillShaderParticleGeometry(string server, string db)
     {
-        const string tablename = "[dbo].[ShaderParticleGeometry]";
-        DataTable dataTable = GetData.GetShaderParticleGeometry();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[ShaderParticleGeometry]";
+        DataTable dataTable = GetSkyrimData.GetShaderParticleGeometry();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillShout(string server, string db)
     {
-        const string tablename = "[dbo].[Shout]";
-        DataTable dataTable = GetData.GetShout();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Shout]";
+        DataTable dataTable = GetSkyrimData.GetShout();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillSkyrimMajorRecord(string server, string db)
     {
-        const string tablename = "[dbo].[SkyrimMajorRecord]";
-        DataTable dataTable = GetData.GetSkyrimMajorRecord();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[SkyrimMajorRecord]";
+        DataTable dataTable = GetSkyrimData.GetSkyrimMajorRecord();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillSoulGem(string server, string db)
     {
-        const string tablename = "[dbo].[SoulGem]";
-        DataTable dataTable = GetData.GetSoulGem();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[SoulGem]";
+        DataTable dataTable = GetSkyrimData.GetSoulGem();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillSoundCategory(string server, string db)
     {
-        const string tablename = "[dbo].[SoundCategory]";
-        DataTable dataTable = GetData.GetSoundCategory();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[SoundCategory]";
+        DataTable dataTable = GetSkyrimData.GetSoundCategory();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillSoundDescriptor(string server, string db)
     {
-        const string tablename = "[dbo].[SoundDescriptor]";
-        DataTable dataTable = GetData.GetSoundDescriptor();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[SoundDescriptor]";
+        DataTable dataTable = GetSkyrimData.GetSoundDescriptor();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillSoundMarker(string server, string db)
     {
-        const string tablename = "[dbo].[SoundMarker]";
-        DataTable dataTable = GetData.GetSoundMarker();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[SoundMarker]";
+        DataTable dataTable = GetSkyrimData.GetSoundMarker();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillSoundOutputModel(string server, string db)
     {
-        const string tablename = "[dbo].[SoundOutputModel]";
-        DataTable dataTable = GetData.GetSoundOutputModel();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[SoundOutputModel]";
+        DataTable dataTable = GetSkyrimData.GetSoundOutputModel();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillSpell(string server, string db)
     {
-        const string tablename = "[dbo].[Spell]";
-        DataTable dataTable = GetData.GetSpell();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Spell]";
+        DataTable dataTable = GetSkyrimData.GetSpell();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillStatic(string server, string db)
     {
-        const string tablename = "[dbo].[Static]";
-        DataTable dataTable = GetData.GetStatic();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Static]";
+        DataTable dataTable = GetSkyrimData.GetStatic();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillTalkingActivator(string server, string db)
     {
-        const string tablename = "[dbo].[TalkingActivator]";
-        DataTable dataTable = GetData.GetTalkingActivator();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[TalkingActivator]";
+        DataTable dataTable = GetSkyrimData.GetTalkingActivator();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillTextureSet(string server, string db)
     {
-        const string tablename = "[dbo].[TextureSet]";
-        DataTable dataTable = GetData.GetTextureSet();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[TextureSet]";
+        DataTable dataTable = GetSkyrimData.GetTextureSet();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillTree(string server, string db)
     {
-        const string tablename = "[dbo].[Tree]";
-        DataTable dataTable = GetData.GetTree();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Tree]";
+        DataTable dataTable = GetSkyrimData.GetTree();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillVisualEffect(string server, string db)
     {
-        const string tablename = "[dbo].[VisualEffect]";
-        DataTable dataTable = GetData.GetVisualEffect();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[VisualEffect]";
+        DataTable dataTable = GetSkyrimData.GetVisualEffect();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillVoiceType(string server, string db)
     {
-        const string tablename = "[dbo].[VoiceType]";
-        DataTable dataTable = GetData.GetVoiceType();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[VoiceType]";
+        DataTable dataTable = GetSkyrimData.GetVoiceType();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillVolumetricLighting(string server, string db)
     {
-        const string tablename = "[dbo].[VolumetricLighting]";
-        DataTable dataTable = GetData.GetVolumetricLighting();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[VolumetricLighting]";
+        DataTable dataTable = GetSkyrimData.GetVolumetricLighting();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillWater(string server, string db)
     {
-        const string tablename = "[dbo].[Water]";
-        DataTable dataTable = GetData.GetWater();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Water]";
+        DataTable dataTable = GetSkyrimData.GetWater();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
+    }
+    
+    public static void FillWeapons(string server, string db)
+    {
+        const string tableName = "[dbo].[Weapon]";
+        DataTable dataTable = GetSkyrimData.GetWeapon();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillWeather(string server, string db)
     {
-        const string tablename = "[dbo].[Weather]";
-        DataTable dataTable = GetData.GetWeather();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Weather]";
+        DataTable dataTable = GetSkyrimData.GetWeather();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillWordOfPower(string server, string db)
     {
-        const string tablename = "[dbo].[WordOfPower]";
-        DataTable dataTable = GetData.GetWordOfPower();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[WordOfPower]";
+        DataTable dataTable = GetSkyrimData.GetWordOfPower();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 
     public static void FillWorldspace(string server, string db)
     {
-        const string tablename = "[dbo].[Worldspace]";
-        DataTable dataTable = GetData.GetWorldSpace();
-        CreateAndFillTables.CreateTable(server, db, tablename, dataTable);
-        CreateAndFillTables.FillTable(server, db, tablename, dataTable);
+        const string tableName = "[dbo].[Worldspace]";
+        DataTable dataTable = GetSkyrimData.GetWorldSpace();
+        CreateAndFillTables.CreateTable(server, db, tableName, dataTable);
+        CreateAndFillTables.FillTable(server, db, tableName, dataTable);
     }
 }
