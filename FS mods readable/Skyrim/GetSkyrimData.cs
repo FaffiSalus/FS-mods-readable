@@ -2,7 +2,7 @@ using FS_mods_readable.Core;
 
 namespace FS_mods_readable.Skyrim;
 
-public static class GetData
+public static class GetSkyrimData
 {
     public static DataTable GetWeapon()
     {
