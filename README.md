@@ -4,6 +4,7 @@ Currently Implemented:
 
 - Skyrim to SQL DB
 - Skyrim to csv files
+- Skyrim to xlsx files (mostly finished)
 - crappy UI
 
 Planned:
