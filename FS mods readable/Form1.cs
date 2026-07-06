@@ -28,7 +28,7 @@ public partial class Form1 : Form
         CreateDatabase.Create(server, db, dir);
     }
 
-    private void btnFileThingy_Click(object sender, EventArgs e)
+    private void btnChooseDirectory_Click(object sender, EventArgs e)
     {
         DialogResult result = _folderBrowserDialog1.ShowDialog();
         if (result == DialogResult.OK)
@@ -55,4 +55,13 @@ public partial class Form1 : Form
         Skyrim2Csv.FillAllFiles(textboxDirectory.Text);
     }
 
+    private void btnCreateExcel_Click(object sender, EventArgs e)
+    {
+        if (textboxDirectory.Text == String.Empty)
+        {
+            throw new Exception("Please specify a directory path");
+        }
+
+        Skyrim2Excel.FillAllFiles(textboxDirectory.Text);
+    }
 }

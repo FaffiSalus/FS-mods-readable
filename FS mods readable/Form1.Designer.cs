@@ -31,7 +31,7 @@ partial class Form1
     {
         btnCreateDatabase = new System.Windows.Forms.Button();
         openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-        btnFileThingy = new System.Windows.Forms.Button();
+        btnChooseDirectory = new System.Windows.Forms.Button();
         textboxDirectory = new System.Windows.Forms.TextBox();
         label1 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
@@ -40,6 +40,7 @@ partial class Form1
         textboxDBName = new System.Windows.Forms.TextBox();
         btnFillTables = new System.Windows.Forms.Button();
         btnCreateCSV = new System.Windows.Forms.Button();
+        btnCreateExcel = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // btnCreateDatabase
@@ -56,15 +57,15 @@ partial class Form1
         // 
         openFileDialog1.FileName = "openFileDialog1";
         // 
-        // btnFileThingy
+        // btnChooseDirectory
         // 
-        btnFileThingy.Location = new System.Drawing.Point(12, 102);
-        btnFileThingy.Name = "btnFileThingy";
-        btnFileThingy.Size = new System.Drawing.Size(113, 23);
-        btnFileThingy.TabIndex = 3;
-        btnFileThingy.Text = "Choose Directory";
-        btnFileThingy.UseVisualStyleBackColor = true;
-        btnFileThingy.Click += btnFileThingy_Click;
+        btnChooseDirectory.Location = new System.Drawing.Point(12, 102);
+        btnChooseDirectory.Name = "btnChooseDirectory";
+        btnChooseDirectory.Size = new System.Drawing.Size(113, 23);
+        btnChooseDirectory.TabIndex = 3;
+        btnChooseDirectory.Text = "Choose Directory";
+        btnChooseDirectory.UseVisualStyleBackColor = true;
+        btnChooseDirectory.Click += btnChooseDirectory_Click;
         // 
         // textboxDirectory
         // 
@@ -126,17 +127,28 @@ partial class Form1
         // 
         btnCreateCSV.Location = new System.Drawing.Point(167, 102);
         btnCreateCSV.Name = "btnCreateCSV";
-        btnCreateCSV.Size = new System.Drawing.Size(75, 23);
+        btnCreateCSV.Size = new System.Drawing.Size(89, 23);
         btnCreateCSV.TabIndex = 8;
         btnCreateCSV.Text = "Create CSV";
         btnCreateCSV.UseVisualStyleBackColor = true;
         btnCreateCSV.Click += btnCreateCSV_Click;
+        // 
+        // btnCreateExcel
+        // 
+        btnCreateExcel.Location = new System.Drawing.Point(167, 131);
+        btnCreateExcel.Name = "btnCreateExcel";
+        btnCreateExcel.Size = new System.Drawing.Size(89, 23);
+        btnCreateExcel.TabIndex = 9;
+        btnCreateExcel.Text = "Create Excel";
+        btnCreateExcel.UseVisualStyleBackColor = true;
+        btnCreateExcel.Click += btnCreateExcel_Click;
         // 
         // Form1
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(800, 450);
+        Controls.Add(btnCreateExcel);
         Controls.Add(btnCreateCSV);
         Controls.Add(textboxServer);
         Controls.Add(textboxDBName);
@@ -146,11 +158,13 @@ partial class Form1
         Controls.Add(label3);
         Controls.Add(textboxDirectory);
         Controls.Add(btnCreateDatabase);
-        Controls.Add(btnFileThingy);
+        Controls.Add(btnChooseDirectory);
         Text = "Readable Mods";
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.Button btnCreateExcel;
 
     private System.Windows.Forms.Button btnCreateCSV;
 
@@ -165,7 +179,7 @@ partial class Form1
 
     private System.Windows.Forms.TextBox textboxDirectory;
 
-    private System.Windows.Forms.Button btnFileThingy;
+    private System.Windows.Forms.Button btnChooseDirectory;
     private System.Windows.Forms.OpenFileDialog openFileDialog1;
 
     private System.Windows.Forms.Button btnCreateDatabase;
