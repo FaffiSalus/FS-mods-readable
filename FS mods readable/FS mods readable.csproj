@@ -16,14 +16,16 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="ClosedXML" Version="0.105.0" />
+      <PackageReference Include="EPPlus" Version="8.6.1" />
       <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.0-preview1.26124.5" />
+      <PackageReference Include="Microsoft.Office.Interop.Excel" Version="16.0.18925.20022" />
       <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="181.25.0" />
       <PackageReference Include="Mutagen.Bethesda.Core" Version="0.55.0-alpha.1" />
       <PackageReference Include="Mutagen.Bethesda.Skyrim" Version="0.54.0-alpha.90" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Core\Excel\" />
       <Folder Include="Core\GoogleSheets\" />
       <Folder Include="Core\XML\" />
     </ItemGroup>

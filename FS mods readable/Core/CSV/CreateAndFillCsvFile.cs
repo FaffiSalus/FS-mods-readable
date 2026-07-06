@@ -8,49 +8,21 @@ public static class CreateAndFillCsvFile
     {
         if (dataTable.Rows.Count > 10000)
         {
-            List<DataTable> tables = SplitTable(dataTable, 10000);
+            List<DataTable> tables = CreateDataTable.SplitTable(dataTable, 10000);
             dataTable.Clear();
             foreach (DataTable table in tables)
             {
-                Export(fileName, table);
+                Export2Csv(fileName, table);
                 table.Clear();
             }
         }
         else
         {
-            Export(fileName, dataTable);
+            Export2Csv(fileName, dataTable);
         }
     }
     
-    // Source - https://stackoverflow.com/q/34663933
-    // Posted by Nilesh Barai, modified by community. See post 'Timeline' for change history
-    // Retrieved 2026-07-05, License - CC BY-SA 3.0
-    private static List<DataTable> SplitTable(DataTable originalTable, int batchSize)
-    {
-        List<DataTable> tables = new List<DataTable>();
-        int i = 0;
-        int j = 1;
-        DataTable newDt = originalTable.Clone();
-        newDt.Clear();
-        foreach (DataRow row in originalTable.Rows)
-        {
-            DataRow newRow = newDt.NewRow();
-            newRow.ItemArray = row.ItemArray;
-            newDt.Rows.Add(newRow);
-            i++;
-            if (i == batchSize)
-            {
-                tables.Add(newDt);
-                j++;
-                newDt = originalTable.Clone();
-                newDt.Clear();
-                i = 0;
-            }
-        }
-        return tables;
-    }
-    
-    public static bool Export(string destFilePath, DataTable dataTable)
+    private static bool Export2Csv(string destFilePath, DataTable dataTable)
     {
         StreamWriter streamWriter = (StreamWriter) null;
         try
