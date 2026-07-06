@@ -64,4 +64,16 @@ public partial class Form1 : Form
 
         Skyrim2Excel.FillAllFiles(textboxDirectory.Text);
     }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        if (textboxDirectory.Text == String.Empty)
+        {
+            throw new Exception("Please specify a directory path");
+        }
+        
+        string fileName = textboxDirectory.Text + "\\Mods.xlsx";
+
+        Skyrim2Excel.FillBook(fileName);
+    }
 }
