@@ -4,921 +4,922 @@ namespace FS_mods_readable.Skyrim;
 
 public static class GetSkyrimData
 {
-    public static DataTable GetWeapon()
+    public static DataTable GetWeapon(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Weapon().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Weapon().WinningOverrides(), trimString, maxLength);
     }
 
-    public static DataTable GetAcousticSpace()
+    public static DataTable GetAcousticSpace(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AcousticSpace().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AcousticSpace().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetActionRecord()
+    public static DataTable GetActionRecord(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ActionRecord().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ActionRecord().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetActivator()
+    public static DataTable GetActivator(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Activator().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Activator().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetActorValueInformation()
+    public static DataTable GetActorValueInformation(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ActorValueInformation().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ActorValueInformation().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetAddonNode()
+    public static DataTable GetAddonNode(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AddonNode().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AddonNode().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetAlchemicalApparatus()
+    public static DataTable GetAlchemicalApparatus(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AlchemicalApparatus().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AlchemicalApparatus().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetAmmunition()
+    public static DataTable GetAmmunition(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Ammunition().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Ammunition().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetAnimatedObject()
+    public static DataTable GetAnimatedObject(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AnimatedObject().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AnimatedObject().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetAPlacedTrap()
+    public static DataTable GetAPlacedTrap(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.APlacedTrap().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.APlacedTrap().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetArmor()
+    public static DataTable GetArmor(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Armor().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Armor().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetArmorAddon()
+    public static DataTable GetArmorAddon(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ArmorAddon().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ArmorAddon().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetArtObject()
+    public static DataTable GetArtObject(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ArtObject().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ArtObject().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetAssociationType()
+    public static DataTable GetAssociationType(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AssociationType().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AssociationType().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetAStoryManagerNode()
+    public static DataTable GetAStoryManagerNode(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AStoryManagerNode().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.AStoryManagerNode().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetBodyPartData()
+    public static DataTable GetBodyPartData(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.BodyPartData().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.BodyPartData().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetBook()
+    public static DataTable GetBook(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Book().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Book().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetCameraPath()
+    public static DataTable GetCameraPath(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.CameraPath().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.CameraPath().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetCameraShot()
+    public static DataTable GetCameraShot(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.CameraShot().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.CameraShot().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetCell()
+    public static DataTable GetCell(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Cell().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Cell().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetClass()
+    public static DataTable GetClass(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Class().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Class().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetClimate()
+    public static DataTable GetClimate(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Climate().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Climate().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetCollisionLayer()
+    public static DataTable GetCollisionLayer(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.CollisionLayer().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.CollisionLayer().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetColorRecord()
+    public static DataTable GetColorRecord(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ColorRecord().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ColorRecord().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetCombatStyle()
+    public static DataTable GetCombatStyle(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.CombatStyle().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.CombatStyle().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetConstructibleObject()
+    public static DataTable GetConstructibleObject(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ConstructibleObject().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ConstructibleObject().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetContainer()
+    public static DataTable GetContainer(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Container().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Container().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetDebris()
+    public static DataTable GetDebris(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Debris().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Debris().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetDefaultObjectManager()
+    public static DataTable GetDefaultObjectManager(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DefaultObjectManager().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DefaultObjectManager().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetDialogBranch()
+    public static DataTable GetDialogBranch(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DialogBranch().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DialogBranch().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetDialogResponses()
+    public static DataTable GetDialogResponses(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DialogResponses().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DialogResponses().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetDialogTopic()
+    public static DataTable GetDialogTopic(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DialogTopic().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DialogTopic().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetDialogView()
+    public static DataTable GetDialogView(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DialogView().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DialogView().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetDoor()
+    public static DataTable GetDoor(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Door().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Door().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetDualCastData()
+    public static DataTable GetDualCastData(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DualCastData().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.DualCastData().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetEffectShader()
+    public static DataTable GetEffectShader(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.EffectShader().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.EffectShader().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetEncounterZone()
+    public static DataTable GetEncounterZone(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.EncounterZone().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.EncounterZone().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetEquipType()
+    public static DataTable GetEquipType(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.EquipType().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.EquipType().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetExplosion()
+    public static DataTable GetExplosion(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Explosion().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Explosion().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetEyes()
+    public static DataTable GetEyes(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Eyes().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Eyes().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetFaction()
+    public static DataTable GetFaction(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Faction().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Faction().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetFlora()
+    public static DataTable GetFlora(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Flora().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Flora().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetFootstep()
+    public static DataTable GetFootstep(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Footstep().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Footstep().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetFootstepSet()
+    public static DataTable GetFootstepSet(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.FootstepSet().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.FootstepSet().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetFormList()
+    public static DataTable GetFormList(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.FormList().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.FormList().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetFurniture()
+    public static DataTable GetFurniture(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Furniture().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Furniture().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetGameSetting()
+    public static DataTable GetGameSetting(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.GameSetting().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.GameSetting().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetGlobal()
+    public static DataTable GetGlobal(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Global().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Global().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetGrass()
+    public static DataTable GetGrass(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Grass().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Grass().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetHair()
+    public static DataTable GetHair(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Hair().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Hair().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetHazard()
+    public static DataTable GetHazard(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Hazard().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Hazard().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetHeadPart()
+    public static DataTable GetHeadPart(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.HeadPart().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.HeadPart().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIAliasVoiceType()
+    public static DataTable GetIAliasVoiceType(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IAliasVoiceType().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IAliasVoiceType().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIBindableEquipment()
+    public static DataTable GetIBindableEquipment(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IBindableEquipment().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IBindableEquipment().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIComplexLocation()
+    public static DataTable GetIComplexLocation(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IComplexLocation().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IComplexLocation().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIConstructible()
+    public static DataTable GetIConstructible(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IConstructible().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IConstructible().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIdleAnimation()
+    public static DataTable GetIdleAnimation(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IdleAnimation().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IdleAnimation().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIdleMarker()
+    public static DataTable GetIdleMarker(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IdleMarker().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IdleMarker().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIEffectRecord()
+    public static DataTable GetIEffectRecord(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IEffectRecord().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IEffectRecord().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIEmittance()
+    public static DataTable GetIEmittance(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IEmittance().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IEmittance().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIExplodeSpawn()
+    public static DataTable GetIExplodeSpawn(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IExplodeSpawn().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IExplodeSpawn().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIHarvestTarget()
+    public static DataTable GetIHarvestTarget(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IHarvestTarget().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IHarvestTarget().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIIdleRelation()
+    public static DataTable GetIIdleRelation(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IIdleRelation().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IIdleRelation().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIItem()
+    public static DataTable GetIItem(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IItem().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IItem().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIItemOrList()
+    public static DataTable GetIItemOrList(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IItemOrList().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IItemOrList().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIKeywordLinkedReference()
+    public static DataTable GetIKeywordLinkedReference(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IKeywordLinkedReference().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IKeywordLinkedReference().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIKnowable()
+    public static DataTable GetIKnowable(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IKnowable().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IKnowable().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetILockList()
+    public static DataTable GetILockList(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ILockList().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ILockList().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetImageSpace()
+    public static DataTable GetImageSpace(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ImageSpace().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ImageSpace().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetImageSpaceAdapter()
+    public static DataTable GetImageSpaceAdapter(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ImageSpaceAdapter().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ImageSpaceAdapter().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIMagicItem()
+    public static DataTable GetIMagicItem(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IMagicItem().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IMagicItem().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetImpact()
+    public static DataTable GetImpact(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Impact().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Impact().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetImpactDataSet()
+    public static DataTable GetImpactDataSet(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ImpactDataSet().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ImpactDataSet().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIngestible()
+    public static DataTable GetIngestible(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Ingestible().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Ingestible().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIngredient()
+    public static DataTable GetIngredient(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Ingredient().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Ingredient().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetINpcOrList()
+    public static DataTable GetINpcOrList(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.INpcOrList().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.INpcOrList().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetINpcSpawn()
+    public static DataTable GetINpcSpawn(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.INpcSpawn().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.INpcSpawn().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIObjectId()
+    public static DataTable GetIObjectId(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IObjectId().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IObjectId().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIOutfitTarget()
+    public static DataTable GetIOutfitTarget(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IOutfitTarget().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IOutfitTarget().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIOwner()
+    public static DataTable GetIOwner(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IOwner().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IOwner().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIPlaceableObject()
+    public static DataTable GetIPlaceableObject(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IPlaceableObject().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IPlaceableObject().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIPlaced()
+    public static DataTable GetIPlaced(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IPlaced().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IPlaced().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIPlacedSimple()
+    public static DataTable GetIPlacedSimple(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IPlacedSimple().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IPlacedSimple().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIPlacedThing()
+    public static DataTable GetIPlacedThing(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IPlacedThing().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IPlacedThing().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIPlacedTrapTarget()
+    public static DataTable GetIPlacedTrapTarget(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IPlacedTrapTarget().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IPlacedTrapTarget().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIReferenceableObject()
+    public static DataTable GetIReferenceableObject(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IReferenceableObject().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IReferenceableObject().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIRegionTarget()
+    public static DataTable GetIRegionTarget(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IRegionTarget().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IRegionTarget().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIRelatable()
+    public static DataTable GetIRelatable(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IRelatable().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IRelatable().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetISound()
+    public static DataTable GetISound(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ISound().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ISound().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetISpellOrList()
+    public static DataTable GetISpellOrList(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ISpellOrList().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ISpellOrList().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetISpellRecord()
+    public static DataTable GetISpellRecord(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ISpellRecord().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ISpellRecord().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIVoiceTypeOrList()
+    public static DataTable GetIVoiceTypeOrList(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IVoiceTypeOrList().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IVoiceTypeOrList().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIWeaponOrList()
+    public static DataTable GetIWeaponOrList(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IWeaponOrList().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IWeaponOrList().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetIWorldspaceOrList()
+    public static DataTable GetIWorldspaceOrList(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IWorldspaceOrList().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.IWorldspaceOrList().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetKey()
+    public static DataTable GetKey(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Key().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Key().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetKeyword()
+    public static DataTable GetKeyword(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Keyword().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Keyword().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLandscape()
+    public static DataTable GetLandscape(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Landscape().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Landscape().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLandscapeTexture()
+    public static DataTable GetLandscapeTexture(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LandscapeTexture().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LandscapeTexture().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLensFlare()
+    public static DataTable GetLensFlare(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LensFlare().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LensFlare().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLeveledItem()
+    public static DataTable GetLeveledItem(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LeveledItem().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LeveledItem().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLeveledNpc()
+    public static DataTable GetLeveledNpc(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LeveledNpc().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LeveledNpc().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLeveledSpell()
+    public static DataTable GetLeveledSpell(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LeveledSpell().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LeveledSpell().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLight()
+    public static DataTable GetLight(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Light().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Light().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLightingTemplate()
+    public static DataTable GetLightingTemplate(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LightingTemplate().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LightingTemplate().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLoadScreen()
+    public static DataTable GetLoadScreen(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LoadScreen().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LoadScreen().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLocation()
+    public static DataTable GetLocation(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Location().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Location().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetLocationReferenceType()
+    public static DataTable GetLocationReferenceType(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LocationReferenceType().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.LocationReferenceType().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetMagicEffect()
+    public static DataTable GetMagicEffect(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MagicEffect().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MagicEffect().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetMaterialObject()
+    public static DataTable GetMaterialObject(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MaterialObject().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MaterialObject().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetMaterialType()
+    public static DataTable GetMaterialType(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MaterialType().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MaterialType().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetMessage()
+    public static DataTable GetMessage(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Message().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Message().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetMiscItem()
+    public static DataTable GetMiscItem(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MiscItem().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MiscItem().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetMoveableStatic()
+    public static DataTable GetMoveableStatic(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MoveableStatic().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MoveableStatic().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetMovementType()
+    public static DataTable GetMovementType(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MovementType().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MovementType().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetMusicTrack()
+    public static DataTable GetMusicTrack(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MusicTrack().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MusicTrack().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetMusicType()
+    public static DataTable GetMusicType(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MusicType().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.MusicType().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetNavigationMesh()
+    public static DataTable GetNavigationMesh(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.NavigationMesh().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.NavigationMesh().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetNavigationMeshInfoMap()
+    public static DataTable GetNavigationMeshInfoMap(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.NavigationMeshInfoMap().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.NavigationMeshInfoMap().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetNpc()
+    public static DataTable GetNpc(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Npc().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Npc().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetObjectEffect()
+    public static DataTable GetObjectEffect(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ObjectEffect().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ObjectEffect().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetOutfit()
+    public static DataTable GetOutfit(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Outfit().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Outfit().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetPackage()
+    public static DataTable GetPackage(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Package().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Package().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetPerk()
+    public static DataTable GetPerk(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Perk().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Perk().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetPlacedNpc()
+    public static DataTable GetPlacedNpc(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.PlacedNpc().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.PlacedNpc().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetPlacedObject()
+    public static DataTable GetPlacedObject(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.PlacedObject().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.PlacedObject().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetProjectile()
+    public static DataTable GetProjectile(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Projectile().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Projectile().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetQuest()
+    public static DataTable GetQuest(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Quest().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Quest().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetRace()
+    public static DataTable GetRace(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Race().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Race().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetRegion()
+    public static DataTable GetRegion(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Region().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Region().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetRelationship()
+    public static DataTable GetRelationship(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Relationship().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Relationship().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetReverbParameters()
+    public static DataTable GetReverbParameters(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ReverbParameters().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ReverbParameters().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetScene()
+    public static DataTable GetScene(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Scene().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Scene().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetScroll()
+    public static DataTable GetScroll(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Scroll().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Scroll().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetShaderParticleGeometry()
+    public static DataTable GetShaderParticleGeometry(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ShaderParticleGeometry().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.ShaderParticleGeometry().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetShout()
+    public static DataTable GetShout(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Shout().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Shout().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetSkyrimMajorRecord()
+    public static DataTable GetSkyrimMajorRecord(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SkyrimMajorRecord().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SkyrimMajorRecord().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetSoulGem()
+    public static DataTable GetSoulGem(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SoulGem().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SoulGem().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetSoundCategory()
+    public static DataTable GetSoundCategory(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SoundCategory().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SoundCategory().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetSoundDescriptor()
+    public static DataTable GetSoundDescriptor(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SoundDescriptor().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SoundDescriptor().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetSoundMarker()
+    public static DataTable GetSoundMarker(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SoundMarker().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SoundMarker().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetSoundOutputModel()
+    public static DataTable GetSoundOutputModel(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SoundOutputModel().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.SoundOutputModel().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetSpell()
+    public static DataTable GetSpell(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Spell().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Spell().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetStatic()
+    public static DataTable GetStatic(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Static().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Static().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetTalkingActivator()
+    public static DataTable GetTalkingActivator(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.TalkingActivator().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.TalkingActivator().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetTextureSet()
+    public static DataTable GetTextureSet(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.TextureSet().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.TextureSet().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetTree()
+    public static DataTable GetTree(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Tree().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Tree().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetVisualEffect()
+    public static DataTable GetVisualEffect(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.VisualEffect().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.VisualEffect().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetVoiceType()
+    public static DataTable GetVoiceType(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.VoiceType().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.VoiceType().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetVolumetricLighting()
+    public static DataTable GetVolumetricLighting(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.VolumetricLighting().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.VolumetricLighting().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetWater()
+    public static DataTable GetWater(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Water().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Water().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetWeather()
+    public static DataTable GetWeather(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Weather().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Weather().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetWordOfPower()
+    public static DataTable GetWordOfPower(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.WordOfPower().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.WordOfPower().WinningOverrides(), trimString, maxLength);
     }
     
-    public static DataTable GetWorldSpace()
+    public static DataTable GetWorldSpace(bool trimString = false, int maxLength = 0)
     {
         using var env = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE);
-        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Worldspace().WinningOverrides());
+        return CreateDataTable.CreateTable(env.LoadOrder.PriorityOrder.Worldspace().WinningOverrides(), trimString, maxLength);
     }
+
 }
