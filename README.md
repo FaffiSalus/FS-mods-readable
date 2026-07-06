@@ -4,12 +4,11 @@ Currently Implemented:
 
 - Skyrim to SQL DB
 - Skyrim to csv files
-- Skyrim to xlsx files (mostly finished)
+- Skyrim to xlsx files
 - crappy UI
 
 Planned:
 
-- Skyrim to Excel
 - Skyrim to Google Sheets
 - Skyrim to xml
 - Other Bethesda Mods to all types
