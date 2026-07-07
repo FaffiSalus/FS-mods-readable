@@ -14,6 +14,7 @@ public static class CreateDataTable
                 dataTable.TableName = rec.GetType().Name;
                 foreach (var field in rec.GetType().GetProperties())
                 {
+                    if (field.Name == "ExportingExtraNam3") continue;
                     using var dataColumn = new DataColumn(field.Name);
                     dataColumn.AllowDBNull = true;
                     dataTable.Columns.Add(dataColumn);
@@ -22,10 +23,11 @@ public static class CreateDataTable
             }
 
             var i = 0;
-            var max = rec.GetType().GetProperties().Length;
+            var max = dataTable.Columns.Count;
             var fieldData = new string?[max];
             foreach (var field in rec.GetType().GetProperties())
             {
+                if (field.Name == "ExportingExtraNam3") continue;
                 var value = field.GetValue(rec)?.ToString();
                 if (trimLength && value != null && value.Length > maxLength && maxLength > 0)
                     value = value[..maxLength];

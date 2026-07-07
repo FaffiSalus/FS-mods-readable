@@ -6,159 +6,13 @@ public static class Skyrim2Sql
 {
     public static void FillAllTables()
     {
-        FillAcousticSpace();
-        FillActionRecord();
-        FillActivator();
-        FillActorValueInformation();
-        FillAddonNode();
-        FillAlchemicalApparatus();
-        FillAmmunition();
-        FillAnimatedObject();
-        FillAPlacedTrap();
-        FillArmor();
-        FillArmorAddon();
-        FillArtObject();
-        FillAssociationType();
-        FillAStoryManagerNode();
-        FillBodyPartData();
-        FillBook();
-        FillCameraPath();
-        FillCameraShot();
-        FillCell();
-        FillClass();
-        FillClimate();
-        FillCollisionLayer();
-        FillColorRecord();
-        FillCombatStyle();
-        FillConstructibleObject();
-        FillContainer();
-        FillDebris();
-        FillDefaultObjectManager();
-        FillDialogBranch();
-        FillDialogResponses();
-        FillDialogTopic();
-        FillDialogView();
-        FillDoor();
-        FillDualCastData();
-        FillEffectShader();
-        FillEncounterZone();
-        FillEquipType();
-        FillExplosion();
-        FillEyes();
-        FillFaction();
-        FillFlora();
-        FillFootstep();
-        FillFootstepSet();
-        FillFormList();
-        FillFurniture();
-        FillGameSetting();
-        FillGlobal();
-        FillGrass();
-        FillHair();
-        FillHazard();
-        FillHeadPart();
-        // FillIAliasVoiceType();
-        // FillIBindableEquipment();
-        // FillIComplexLocation();
-        // FillIConstructible();
-        FillIdleAnimation();
-        FillIdleMarker();
-        // FillIEffectRecord();
-        // FillIEmittance();
-        // FillIExplodeSpawn();
-        // FillIHarvestTarget();
-        // FillIIdleRelation();
-        // FillIItem();
-        // FillIItemOrList();
-        // FillIKeywordLinkedReference();
-        // FillIKnowable();
-        // FillILockList();
-        FillImageSpace();
-        FillImageSpaceAdapter();
-        // FillIMagicItem();
-        FillImpact();
-        FillImpactDataSet();
-        FillIngestible();
-        FillIngredient();
-        // FillINpcOrList();
-        // FillINpcSpawn();
-        // FillIObjectId();
-        // FillIOutfitTarget();
-        // FillIOwner();
-        // FillIPlaceableObject();
-        // FillIPlaced();
-        // FillIPlacedSimple();
-        // FillIPlacedThing();
-        // FillIPlacedTrapTarget();
-        // FillIReferenceableObject();
-        // FillIRegionTarget();
-        // FillIRelatable();
-        // FillISound();
-        // FillISpellOrList();
-        // FillISpellRecord();
-        // FillIVoiceTypeOrList();
-        // FillIWeaponOrList();
-        // FillIWorldspaceOrList();
-        FillKey();
-        FillKeyword();
-        FillLandscape();
-        FillLandscapeTexture();
-        FillLensFlare();
-        FillLeveledItem();
-        FillLeveledNpc();
-        FillLeveledSpell();
-        FillLight();
-        FillLightingTemplate();
-        FillLoadScreen();
-        FillLocation();
-        FillLocationReferenceType();
-        FillMagicEffect();
-        FillMaterialObject();
-        FillMaterialType();
-        FillMessage();
-        FillMiscItem();
-        FillMoveableStatic();
-        FillMovementType();
-        FillMusicTrack();
-        FillMusicType();
-        FillNavigationMesh();
-        FillNavigationMeshInfoMap();
-        FillNpc();
-        FillObjectEffect();
-        FillOutfit();
-        FillPackage();
-        FillPerk();
-        FillPlacedNpc();
-        FillPlacedObject();
-        FillProjectile();
-        FillQuest();
-        //FillRace();
-        FillRegion();
-        FillRelationship();
-        FillReverbParameters();
-        FillScene();
-        FillScroll();
-        FillShaderParticleGeometry();
-        FillShout();
-        //FillSkyrimMajorRecord();
-        FillSoulGem();
-        FillSoundCategory();
-        FillSoundDescriptor();
-        FillSoundMarker();
-        FillSoundOutputModel();
-        FillSpell();
-        FillStatic();
-        FillTalkingActivator();
-        FillTextureSet();
-        FillTree();
-        FillVisualEffect();
-        FillVoiceType();
-        FillVolumetricLighting();
-        FillWater();
-        FillWeapons();
-        FillWeather();
-        FillWordOfPower();
-        FillWorldspace();
+        var methods = typeof(Skyrim2Sql).GetMethods();
+        foreach (var method in methods)
+        {
+            if (method.Name == "FillAllTables") continue;
+            if (!method.Name.Contains("Fill")) continue;
+            method.Invoke(null, null);
+        }
     }
 
     public static void FillAcousticSpace()
@@ -569,38 +423,6 @@ public static class Skyrim2Sql
         CreateAndFillTables.FillTable(tableName, dataTable);
     }
 
-    public static void FillIAliasVoiceType()
-    {
-        const string tableName = "[dbo].[IAliasVoiceType]";
-        using var dataTable = GetSkyrimData.GetIAliasVoiceType();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIBindableEquipment()
-    {
-        const string tableName = "[dbo].[IBindableEquipment]";
-        using var dataTable = GetSkyrimData.GetIBindableEquipment();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIComplexLocation()
-    {
-        const string tableName = "[dbo].[IComplexLocation]";
-        using var dataTable = GetSkyrimData.GetIComplexLocation();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIConstructible()
-    {
-        const string tableName = "[dbo].[IConstructible]";
-        using var dataTable = GetSkyrimData.GetIConstructible();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
     public static void FillIdleAnimation()
     {
         const string tableName = "[dbo].[IdleAnimation]";
@@ -617,86 +439,6 @@ public static class Skyrim2Sql
         CreateAndFillTables.FillTable(tableName, dataTable);
     }
 
-    public static void FillIEffectRecord()
-    {
-        const string tableName = "[dbo].[IEffectRecord]";
-        using var dataTable = GetSkyrimData.GetIEffectRecord();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIEmittance()
-    {
-        const string tableName = "[dbo].[IEmittance]";
-        using var dataTable = GetSkyrimData.GetIEmittance();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIExplodeSpawn()
-    {
-        const string tableName = "[dbo].[IExplodeSpawn]";
-        using var dataTable = GetSkyrimData.GetIExplodeSpawn();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIHarvestTarget()
-    {
-        const string tableName = "[dbo].[IHarvestTarget]";
-        using var dataTable = GetSkyrimData.GetIHarvestTarget();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIIdleRelation()
-    {
-        const string tableName = "[dbo].[IIdleRelation]";
-        using var dataTable = GetSkyrimData.GetIIdleRelation();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIItem()
-    {
-        const string tableName = "[dbo].[IItem]";
-        using var dataTable = GetSkyrimData.GetIItem();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIItemOrList()
-    {
-        const string tableName = "[dbo].[IItemOrList]";
-        using var dataTable = GetSkyrimData.GetIItemOrList();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIKeywordLinkedReference()
-    {
-        const string tableName = "[dbo].[IKeywordLinkedReference]";
-        using var dataTable = GetSkyrimData.GetIKeywordLinkedReference();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIKnowable()
-    {
-        const string tableName = "[dbo].[IKnowable]";
-        using var dataTable = GetSkyrimData.GetIKnowable();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillILockList()
-    {
-        const string tableName = "[dbo].[ILockList]";
-        using var dataTable = GetSkyrimData.GetILockList();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
     public static void FillImageSpace()
     {
         const string tableName = "[dbo].[ImageSpace]";
@@ -709,14 +451,6 @@ public static class Skyrim2Sql
     {
         const string tableName = "[dbo].[ImageSpaceAdapter]";
         using var dataTable = GetSkyrimData.GetImageSpaceAdapter();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIMagicItem()
-    {
-        const string tableName = "[dbo].[IMagicItem]";
-        using var dataTable = GetSkyrimData.GetIMagicItem();
         CreateAndFillTables.CreateTable(tableName, dataTable);
         CreateAndFillTables.FillTable(tableName, dataTable);
     }
@@ -749,158 +483,6 @@ public static class Skyrim2Sql
     {
         const string tableName = "[dbo].[Ingredient]";
         using var dataTable = GetSkyrimData.GetIngredient();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillINpcOrList()
-    {
-        const string tableName = "[dbo].[INpcOrList]";
-        using var dataTable = GetSkyrimData.GetINpcOrList();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillINpcSpawn()
-    {
-        const string tableName = "[dbo].[INpcSpawn]";
-        using var dataTable = GetSkyrimData.GetINpcSpawn();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIObjectId()
-    {
-        const string tableName = "[dbo].[IObjectId]";
-        using var dataTable = GetSkyrimData.GetIObjectId();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIOutfitTarget()
-    {
-        const string tableName = "[dbo].[IOutfitTarget]";
-        using var dataTable = GetSkyrimData.GetIOutfitTarget();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIOwner()
-    {
-        const string tableName = "[dbo].[IOwner]";
-        using var dataTable = GetSkyrimData.GetIOwner();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIPlaceableObject()
-    {
-        const string tableName = "[dbo].[IPlaceableObject]";
-        using var dataTable = GetSkyrimData.GetIPlaceableObject();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIPlaced()
-    {
-        const string tableName = "[dbo].[IPlaced]";
-        using var dataTable = GetSkyrimData.GetIPlaced();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIPlacedSimple()
-    {
-        const string tableName = "[dbo].[IPlacedSimple]";
-        using var dataTable = GetSkyrimData.GetIPlacedSimple();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIPlacedThing()
-    {
-        const string tableName = "[dbo].[IPlacedThing]";
-        using var dataTable = GetSkyrimData.GetIPlacedThing();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIPlacedTrapTarget()
-    {
-        const string tableName = "[dbo].[IPlacedTrapTarget]";
-        using var dataTable = GetSkyrimData.GetIPlacedTrapTarget();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIReferenceableObject()
-    {
-        const string tableName = "[dbo].[IReferenceableObject]";
-        using var dataTable = GetSkyrimData.GetIReferenceableObject();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIRegionTarget()
-    {
-        const string tableName = "[dbo].[IRegionTarget]";
-        using var dataTable = GetSkyrimData.GetIRegionTarget();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIRelatable()
-    {
-        const string tableName = "[dbo].[IRelatable]";
-        using var dataTable = GetSkyrimData.GetIRelatable();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillISound()
-    {
-        const string tableName = "[dbo].[ISound]";
-        using var dataTable = GetSkyrimData.GetISound();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillISpellOrList()
-    {
-        const string tableName = "[dbo].[ISpellOrList]";
-        using var dataTable = GetSkyrimData.GetISpellOrList();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillISpellRecord()
-    {
-        const string tableName = "[dbo].[ISpellRecord]";
-        using var dataTable = GetSkyrimData.GetISpellRecord();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIVoiceTypeOrList()
-    {
-        const string tableName = "[dbo].[IVoiceTypeOrList]";
-        using var dataTable = GetSkyrimData.GetIVoiceTypeOrList();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIWeaponOrList()
-    {
-        const string tableName = "[dbo].[IWeaponOrList]";
-        using var dataTable = GetSkyrimData.GetIWeaponOrList();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillIWorldspaceOrList()
-    {
-        const string tableName = "[dbo].[IWorldspaceOrList]";
-        using var dataTable = GetSkyrimData.GetIWorldspaceOrList();
         CreateAndFillTables.CreateTable(tableName, dataTable);
         CreateAndFillTables.FillTable(tableName, dataTable);
     }
@@ -1171,6 +753,7 @@ public static class Skyrim2Sql
 
     public static void FillRace()
     {
+        //ExportingExtraNam3 broken
         const string tableName = "[dbo].[Race]";
         using var dataTable = GetSkyrimData.GetRace();
         CreateAndFillTables.CreateTable(tableName, dataTable);
@@ -1229,14 +812,6 @@ public static class Skyrim2Sql
     {
         const string tableName = "[dbo].[Shout]";
         using var dataTable = GetSkyrimData.GetShout();
-        CreateAndFillTables.CreateTable(tableName, dataTable);
-        CreateAndFillTables.FillTable(tableName, dataTable);
-    }
-
-    public static void FillSkyrimMajorRecord()
-    {
-        const string tableName = "[dbo].[SkyrimMajorRecord]";
-        using var dataTable = GetSkyrimData.GetSkyrimMajorRecord();
         CreateAndFillTables.CreateTable(tableName, dataTable);
         CreateAndFillTables.FillTable(tableName, dataTable);
     }
