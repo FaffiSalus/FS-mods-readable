@@ -1,6 +1,7 @@
 // Global using directives
 
 global using System.ComponentModel;
+global using System.Configuration;
 global using System.Data;
 global using System.IO;
 global using Microsoft.Data.SqlClient;

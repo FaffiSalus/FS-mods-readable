@@ -1,19 +1,17 @@
-using Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
-using ClosedXML.Excel;
 
 namespace FS_mods_readable.Core.Excel;
 
 public static class CreateAndFillExcelFile
 {
-    private const int _maxRows = 1000000;
-
     public static void CreateAndFill(string fileName, string sheetName, DataTable dataTable)
     {
-        if (dataTable.Rows.Count > _maxRows)
+        var maxRows = int.Parse(ConfigHandler.GetExcelRowLimit() ?? "0");
+        if (dataTable.Rows.Count > maxRows && maxRows > 0)
         {
-            var tables = CreateDataTable.SplitTable(dataTable, _maxRows);
-            int i = 0;
+            var tables = CreateDataTable.SplitTable(dataTable, maxRows);
+            LogHandler.WriteToLog(dataTable.TableName + " exceeds Excel Row Limit. DataTable split.");
+            var i = 0;
             foreach (var table in tables)
             {
                 Export2Excel(fileName, sheetName + "_" + i, table);
@@ -31,8 +29,8 @@ public static class CreateAndFillExcelFile
         if (dataTable.Rows.Count <= 0) return;
         using var package = new ExcelPackage(fileName);
         var sheet = package.Workbook.Worksheets.Add(sheetName);
-        var filledRange = sheet.Cells["A1"].LoadFromDataTable(dataTable, true);
+        sheet.Cells["A1"].LoadFromDataTable(dataTable, true);
         package.Save();
-        File.AppendAllText(Directory.GetCurrentDirectory() + "\\log.txt", DateTime.Now.ToShortTimeString() + ": Wrote " + sheetName + "\n");
+        LogHandler.WriteToLog("Wrote " + sheetName + "\n");
     }
 }
