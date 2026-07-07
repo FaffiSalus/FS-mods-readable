@@ -14,3 +14,8 @@ Planned:
 - Other Bethesda Mods to all types
 - Good UI
 
+How to use:
+
+- go to latest Release and download attached .zip
+- unzip and run .exe
+- use of Sql Database requires you to have a sql server up and running
