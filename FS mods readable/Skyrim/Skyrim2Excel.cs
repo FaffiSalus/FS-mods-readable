@@ -8,124 +8,13 @@ public static class Skyrim2Excel
     public static void FillAllFiles()
     {
         var fileName = ConfigHandler.GetExcelDirectory() + "\\" + ConfigHandler.GetExcelFileName() + ".xlsx";
-        FillAcousticSpace(fileName);
-        FillActionRecord(fileName);
-        FillActivator(fileName);
-        FillActorValueInformation(fileName);
-        FillAddonNode(fileName);
-        FillAlchemicalApparatus(fileName);
-        FillAmmunition(fileName);
-        FillAnimatedObject(fileName);
-        FillAPlacedTrap(fileName);
-        FillArmor(fileName);
-        FillArmorAddon(fileName);
-        FillArtObject(fileName);
-        FillAssociationType(fileName);
-        FillAStoryManagerNode(fileName);
-        FillBodyPartData(fileName);
-        FillBook(fileName);
-        FillCameraPath(fileName);
-        FillCameraShot(fileName);
-        FillCell(fileName);
-        FillClass(fileName);
-        FillClimate(fileName);
-        FillCollisionLayer(fileName);
-        FillColorRecord(fileName);
-        FillCombatStyle(fileName);
-        FillConstructibleObject(fileName);
-        FillContainer(fileName);
-        FillDebris(fileName);
-        FillDefaultObjectManager(fileName);
-        FillDialogBranch(fileName);
-        FillDialogResponses(fileName);
-        FillDialogTopic(fileName);
-        FillDialogView(fileName);
-        FillDoor(fileName);
-        FillDualCastData(fileName);
-        FillEffectShader(fileName);
-        FillEncounterZone(fileName);
-        FillEquipType(fileName);
-        FillExplosion(fileName);
-        FillEyes(fileName);
-        FillFaction(fileName);
-        FillFlora(fileName);
-        FillFootstep(fileName);
-        FillFootstepSet(fileName);
-        FillFormList(fileName);
-        FillFurniture(fileName);
-        FillGameSetting(fileName);
-        FillGlobal(fileName);
-        FillGrass(fileName);
-        FillHair(fileName);
-        FillHazard(fileName);
-        FillHeadPart(fileName);
-        FillIdleAnimation(fileName);
-        FillIdleMarker(fileName);
-        FillImageSpace(fileName);
-        FillImageSpaceAdapter(fileName);
-        FillImpact(fileName);
-        FillImpactDataSet(fileName);
-        FillIngestible(fileName);
-        FillIngredient(fileName);
-        FillKey(fileName);
-        FillKeyword(fileName);
-        FillLandscape(fileName);
-        FillLandscapeTexture(fileName);
-        FillLensFlare(fileName);
-        FillLeveledItem(fileName);
-        FillLeveledNpc(fileName);
-        FillLeveledSpell(fileName);
-        FillLight(fileName);
-        FillLightingTemplate(fileName);
-        FillLoadScreen(fileName);
-        FillLocation(fileName);
-        FillLocationReferenceType(fileName);
-        FillMagicEffect(fileName);
-        FillMaterialObject(fileName);
-        FillMaterialType(fileName);
-        FillMessage(fileName);
-        FillMiscItem(fileName);
-        FillMoveableStatic(fileName);
-        FillMovementType(fileName);
-        FillMusicTrack(fileName);
-        FillMusicType(fileName);
-        FillNavigationMesh(fileName);
-        FillNavigationMeshInfoMap(fileName);
-        FillNpc(fileName);
-        FillObjectEffect(fileName);
-        FillOutfit(fileName);
-        FillPackage(fileName);
-        FillPerk(fileName);
-        FillPlacedNpc(fileName);
-        FillPlacedObject(fileName);
-        FillProjectile(fileName);
-        FillQuest(fileName);
-        //FillRace(fileName);
-        FillRegion(fileName);
-        FillRelationship(fileName);
-        FillReverbParameters(fileName);
-        FillScene(fileName);
-        FillScroll(fileName);
-        FillShaderParticleGeometry(fileName);
-        FillShout(fileName);
-        FillSoulGem(fileName);
-        FillSoundCategory(fileName);
-        FillSoundDescriptor(fileName);
-        FillSoundMarker(fileName);
-        FillSoundOutputModel(fileName);
-        FillSpell(fileName);
-        FillStatic(fileName);
-        FillTalkingActivator(fileName);
-        FillTextureSet(fileName);
-        FillTree(fileName);
-        FillVisualEffect(fileName);
-        FillVoiceType(fileName);
-        FillVolumetricLighting(fileName);
-        FillWater(fileName);
-        FillWeapons(fileName);
-        FillWeather(fileName);
-        FillWordOfPower(fileName);
-        FillWorldspace(fileName);
+        var methods = typeof(Skyrim2Excel).GetMethods();
+        foreach (var method in methods)
+        {
+            if (method.Name == "FillAllFiles") continue;
+            if (!method.Name.Contains("Fill")) continue;
+            method.Invoke(null, [fileName]);
+        }
     }
 
     public static void FillAcousticSpace(string fileName)
@@ -487,34 +376,6 @@ public static class Skyrim2Excel
         CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
     }
 
-    public static void FillIAliasVoiceType(string fileName)
-    {
-        const string sheetName = "IAliasVoiceType";
-        var dataTable = GetSkyrimData.GetIAliasVoiceType(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIBindableEquipment(string fileName)
-    {
-        const string sheetName = "IBindableEquipment";
-        var dataTable = GetSkyrimData.GetIBindableEquipment(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIComplexLocation(string fileName)
-    {
-        const string sheetName = "IComplexLocation";
-        var dataTable = GetSkyrimData.GetIComplexLocation(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIConstructible(string fileName)
-    {
-        const string sheetName = "IConstructible";
-        var dataTable = GetSkyrimData.GetIConstructible(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
     public static void FillIdleAnimation(string fileName)
     {
         const string sheetName = "IdleAnimation";
@@ -529,77 +390,6 @@ public static class Skyrim2Excel
         CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
     }
 
-    public static void FillIEffectRecord(string fileName)
-    {
-        const string sheetName = "IEffectRecord";
-        var dataTable = GetSkyrimData.GetIEffectRecord(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIEmittance(string fileName)
-    {
-        const string sheetName = "IEmittance";
-        var dataTable = GetSkyrimData.GetIEmittance(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIExplodeSpawn(string fileName)
-    {
-        const string sheetName = "IExplodeSpawn";
-        var dataTable = GetSkyrimData.GetIExplodeSpawn(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIHarvestTarget(string fileName)
-    {
-        const string sheetName = "IHarvestTarget";
-        var dataTable = GetSkyrimData.GetIHarvestTarget(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIIdleRelation(string fileName)
-    {
-        const string sheetName = "IIdleRelation";
-        var dataTable = GetSkyrimData.GetIIdleRelation(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIItem(string fileName)
-    {
-        const string sheetName = "IItem";
-        var dataTable = GetSkyrimData.GetIItem(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIItemOrList(string fileName)
-    {
-        const string sheetName = "IItemOrList";
-        var dataTable = GetSkyrimData.GetIItemOrList(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIKeywordLinkedReference(string fileName)
-    {
-        const string sheetName = "IKeywordLinkedReference";
-        var dataTable =
-            GetSkyrimData.GetIKeywordLinkedReference(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIKnowable(string fileName)
-    {
-        const string sheetName = "IKnowable";
-        var dataTable = GetSkyrimData.GetIKnowable(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillILockList(string fileName)
-    {
-        const string sheetName = "ILockList";
-        var dataTable = GetSkyrimData.GetILockList(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
     public static void FillImageSpace(string fileName)
     {
         const string sheetName = "ImageSpace";
@@ -611,13 +401,6 @@ public static class Skyrim2Excel
     {
         const string sheetName = "ImageSpaceAdapter";
         var dataTable = GetSkyrimData.GetImageSpaceAdapter(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIMagicItem(string fileName)
-    {
-        const string sheetName = "IMagicItem";
-        var dataTable = GetSkyrimData.GetIMagicItem(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
         CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
     }
 
@@ -646,140 +429,6 @@ public static class Skyrim2Excel
     {
         const string sheetName = "Ingredient";
         var dataTable = GetSkyrimData.GetIngredient(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillINpcOrList(string fileName)
-    {
-        const string sheetName = "INpcOrList";
-        var dataTable = GetSkyrimData.GetINpcOrList(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillINpcSpawn(string fileName)
-    {
-        const string sheetName = "INpcSpawn";
-        var dataTable = GetSkyrimData.GetINpcSpawn(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIObjectId(string fileName)
-    {
-        const string sheetName = "IObjectId";
-        var dataTable = GetSkyrimData.GetIObjectId(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIOutfitTarget(string fileName)
-    {
-        const string sheetName = "IOutfitTarget";
-        var dataTable = GetSkyrimData.GetIOutfitTarget(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIOwner(string fileName)
-    {
-        const string sheetName = "IOwner";
-        var dataTable = GetSkyrimData.GetIOwner(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIPlaceableObject(string fileName)
-    {
-        const string sheetName = "IPlaceableObject";
-        var dataTable = GetSkyrimData.GetIPlaceableObject(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIPlaced(string fileName)
-    {
-        const string sheetName = "IPlaced";
-        var dataTable = GetSkyrimData.GetIPlaced(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIPlacedSimple(string fileName)
-    {
-        const string sheetName = "IPlacedSimple";
-        var dataTable = GetSkyrimData.GetIPlacedSimple(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIPlacedThing(string fileName)
-    {
-        const string sheetName = "IPlacedThing";
-        var dataTable = GetSkyrimData.GetIPlacedThing(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIPlacedTrapTarget(string fileName)
-    {
-        const string sheetName = "IPlacedTrapTarget";
-        var dataTable = GetSkyrimData.GetIPlacedTrapTarget(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIReferenceableObject(string fileName)
-    {
-        const string sheetName = "IReferenceableObject";
-        var dataTable =
-            GetSkyrimData.GetIReferenceableObject(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIRegionTarget(string fileName)
-    {
-        const string sheetName = "IRegionTarget";
-        var dataTable = GetSkyrimData.GetIRegionTarget(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIRelatable(string fileName)
-    {
-        const string sheetName = "IRelatable";
-        var dataTable = GetSkyrimData.GetIRelatable(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillISound(string fileName)
-    {
-        const string sheetName = "ISound";
-        var dataTable = GetSkyrimData.GetISound(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillISpellOrList(string fileName)
-    {
-        const string sheetName = "ISpellOrList";
-        var dataTable = GetSkyrimData.GetISpellOrList(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillISpellRecord(string fileName)
-    {
-        const string sheetName = "ISpellRecord";
-        var dataTable = GetSkyrimData.GetISpellRecord(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIVoiceTypeOrList(string fileName)
-    {
-        const string sheetName = "IVoiceTypeOrList";
-        var dataTable = GetSkyrimData.GetIVoiceTypeOrList(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIWeaponOrList(string fileName)
-    {
-        const string sheetName = "IWeaponOrList";
-        var dataTable = GetSkyrimData.GetIWeaponOrList(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillIWorldspaceOrList(string fileName)
-    {
-        const string sheetName = "IWorldspaceOrList";
-        var dataTable = GetSkyrimData.GetIWorldspaceOrList(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
         CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
     }
 
@@ -1070,13 +719,6 @@ public static class Skyrim2Excel
     {
         const string sheetName = "Shout";
         var dataTable = GetSkyrimData.GetShout(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
-        CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
-    }
-
-    public static void FillSkyrimMajorRecord(string fileName)
-    {
-        const string sheetName = "SkyrimMajorRecord";
-        var dataTable = GetSkyrimData.GetSkyrimMajorRecord(true, int.Parse(ConfigHandler.GetExcelCellLimit() ?? "0"));
         CreateAndFillExcelFile.CreateAndFill(fileName, sheetName, dataTable);
     }
 

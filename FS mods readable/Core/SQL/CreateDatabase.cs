@@ -22,6 +22,7 @@ public static class CreateDatabase
         {
             myConn.Open();
             myCommand.ExecuteNonQuery();
+            myCommand.CommandTimeout = 600;
             LogHandler.WriteToLog("DataBase " + db + " is Created Successfully");
         }
         catch (Exception ex)

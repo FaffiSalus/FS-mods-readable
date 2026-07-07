@@ -7,124 +7,13 @@ public static class Skyrim2Csv
 {
     public static void FillAllFiles()
     {
-        FillAcousticSpace();
-        FillActionRecord();
-        FillActivator();
-        FillActorValueInformation();
-        FillAddonNode();
-        FillAlchemicalApparatus();
-        FillAmmunition();
-        FillAnimatedObject();
-        FillAPlacedTrap();
-        FillArmor();
-        FillArmorAddon();
-        FillArtObject();
-        FillAssociationType();
-        FillAStoryManagerNode();
-        FillBodyPartData();
-        FillBook();
-        FillCameraPath();
-        FillCameraShot();
-        FillCell();
-        FillClass();
-        FillClimate();
-        FillCollisionLayer();
-        FillColorRecord();
-        FillCombatStyle();
-        FillConstructibleObject();
-        FillContainer();
-        FillDebris();
-        FillDefaultObjectManager();
-        FillDialogBranch();
-        FillDialogResponses();
-        FillDialogTopic();
-        FillDialogView();
-        FillDoor();
-        FillDualCastData();
-        FillEffectShader();
-        FillEncounterZone();
-        FillEquipType();
-        FillExplosion();
-        FillEyes();
-        FillFaction();
-        FillFlora();
-        FillFootstep();
-        FillFootstepSet();
-        FillFormList();
-        FillFurniture();
-        FillGameSetting();
-        FillGlobal();
-        FillGrass();
-        FillHair();
-        FillHazard();
-        FillHeadPart();
-        FillIdleAnimation();
-        FillIdleMarker();
-        FillImageSpace();
-        FillImageSpaceAdapter();
-        FillImpact();
-        FillImpactDataSet();
-        FillIngestible();
-        FillIngredient();
-        FillKey();
-        FillKeyword();
-        FillLandscape();
-        FillLandscapeTexture();
-        FillLensFlare();
-        FillLeveledItem();
-        FillLeveledNpc();
-        FillLeveledSpell();
-        FillLight();
-        FillLightingTemplate();
-        FillLoadScreen();
-        FillLocation();
-        FillLocationReferenceType();
-        FillMagicEffect();
-        FillMaterialObject();
-        FillMaterialType();
-        FillMessage();
-        FillMiscItem();
-        FillMoveableStatic();
-        FillMovementType();
-        FillMusicTrack();
-        FillMusicType();
-        FillNavigationMesh();
-        FillNavigationMeshInfoMap();
-        FillNpc();
-        FillObjectEffect();
-        FillOutfit();
-        FillPackage();
-        FillPerk();
-        FillPlacedNpc();
-        FillPlacedObject();
-        FillProjectile();
-        FillQuest();
-        //FillRace();
-        FillRegion();
-        FillRelationship();
-        FillReverbParameters();
-        FillScene();
-        FillScroll();
-        FillShaderParticleGeometry();
-        FillShout();
-        FillSoulGem();
-        FillSoundCategory();
-        FillSoundDescriptor();
-        FillSoundMarker();
-        FillSoundOutputModel();
-        FillSpell();
-        FillStatic();
-        FillTalkingActivator();
-        FillTextureSet();
-        FillTree();
-        FillVisualEffect();
-        FillVoiceType();
-        FillVolumetricLighting();
-        FillWater();
-        FillWeapons();
-        FillWeather();
-        FillWordOfPower();
-        FillWorldspace();
+        var methods = typeof(Skyrim2Csv).GetMethods();
+        foreach (var method in methods)
+        {
+            if (method.Name == "FillAllFiles") continue;
+            if (!method.Name.Contains("Fill")) continue;
+            method.Invoke(null, null);
+        }
     }
 
     public static void FillAcousticSpace()
@@ -484,34 +373,6 @@ public static class Skyrim2Csv
         CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
     }
 
-    public static void FillIAliasVoiceType()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IAliasVoiceType.csv";
-        var dataTable = GetSkyrimData.GetIAliasVoiceType();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIBindableEquipment()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IBindableEquipment.csv";
-        var dataTable = GetSkyrimData.GetIBindableEquipment();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIComplexLocation()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IComplexLocation.csv";
-        var dataTable = GetSkyrimData.GetIComplexLocation();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIConstructible()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IConstructible.csv";
-        var dataTable = GetSkyrimData.GetIConstructible();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
     public static void FillIdleAnimation()
     {
         var fileName = ConfigHandler.GetCsvDirectory() + "\\IdleAnimation.csv";
@@ -526,76 +387,6 @@ public static class Skyrim2Csv
         CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
     }
 
-    public static void FillIEffectRecord()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IEffectRecord.csv";
-        var dataTable = GetSkyrimData.GetIEffectRecord();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIEmittance()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IEmittance.csv";
-        var dataTable = GetSkyrimData.GetIEmittance();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIExplodeSpawn()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IExplodeSpawn.csv";
-        var dataTable = GetSkyrimData.GetIExplodeSpawn();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIHarvestTarget()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IHarvestTarget.csv";
-        var dataTable = GetSkyrimData.GetIHarvestTarget();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIIdleRelation()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IIdleRelation.csv";
-        var dataTable = GetSkyrimData.GetIIdleRelation();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIItem()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IItem.csv";
-        var dataTable = GetSkyrimData.GetIItem();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIItemOrList()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IItemOrList.csv";
-        var dataTable = GetSkyrimData.GetIItemOrList();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIKeywordLinkedReference()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IKeywordLinkedReference.csv";
-        var dataTable = GetSkyrimData.GetIKeywordLinkedReference();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIKnowable()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IKnowable.csv";
-        var dataTable = GetSkyrimData.GetIKnowable();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillILockList()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\ILockList.csv";
-        var dataTable = GetSkyrimData.GetILockList();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
     public static void FillImageSpace()
     {
         var fileName = ConfigHandler.GetCsvDirectory() + "\\ImageSpace.csv";
@@ -607,13 +398,6 @@ public static class Skyrim2Csv
     {
         var fileName = ConfigHandler.GetCsvDirectory() + "\\ImageSpaceAdapter.csv";
         var dataTable = GetSkyrimData.GetImageSpaceAdapter();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIMagicItem()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IMagicItem.csv";
-        var dataTable = GetSkyrimData.GetIMagicItem();
         CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
     }
 
@@ -642,139 +426,6 @@ public static class Skyrim2Csv
     {
         var fileName = ConfigHandler.GetCsvDirectory() + "\\Ingredient.csv";
         var dataTable = GetSkyrimData.GetIngredient();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillINpcOrList()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\INpcOrList.csv";
-        var dataTable = GetSkyrimData.GetINpcOrList();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillINpcSpawn()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\INpcSpawn.csv";
-        var dataTable = GetSkyrimData.GetINpcSpawn();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIObjectId()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IObjectId.csv";
-        var dataTable = GetSkyrimData.GetIObjectId();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIOutfitTarget()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IOutfitTarget.csv";
-        var dataTable = GetSkyrimData.GetIOutfitTarget();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIOwner()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IOwner.csv";
-        var dataTable = GetSkyrimData.GetIOwner();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIPlaceableObject()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IPlaceableObject.csv";
-        var dataTable = GetSkyrimData.GetIPlaceableObject();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIPlaced()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IPlaced.csv";
-        var dataTable = GetSkyrimData.GetIPlaced();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIPlacedSimple()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IPlacedSimple.csv";
-        var dataTable = GetSkyrimData.GetIPlacedSimple();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIPlacedThing()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IPlacedThing.csv";
-        var dataTable = GetSkyrimData.GetIPlacedThing();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIPlacedTrapTarget()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IPlacedTrapTarget.csv";
-        var dataTable = GetSkyrimData.GetIPlacedTrapTarget();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIReferenceableObject()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IReferenceableObject.csv";
-        var dataTable = GetSkyrimData.GetIReferenceableObject();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIRegionTarget()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IRegionTarget.csv";
-        var dataTable = GetSkyrimData.GetIRegionTarget();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIRelatable()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IRelatable.csv";
-        var dataTable = GetSkyrimData.GetIRelatable();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillISound()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\ISound.csv";
-        var dataTable = GetSkyrimData.GetISound();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillISpellOrList()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\ISpellOrList.csv";
-        var dataTable = GetSkyrimData.GetISpellOrList();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillISpellRecord()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\ISpellRecord.csv";
-        var dataTable = GetSkyrimData.GetISpellRecord();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIVoiceTypeOrList()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IVoiceTypeOrList.csv";
-        var dataTable = GetSkyrimData.GetIVoiceTypeOrList();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIWeaponOrList()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IWeaponOrList.csv";
-        var dataTable = GetSkyrimData.GetIWeaponOrList();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillIWorldspaceOrList()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\IWorldspaceOrList.csv";
-        var dataTable = GetSkyrimData.GetIWorldspaceOrList();
         CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
     }
 
@@ -1062,13 +713,6 @@ public static class Skyrim2Csv
     {
         var fileName = ConfigHandler.GetCsvDirectory() + "\\Shout.csv";
         var dataTable = GetSkyrimData.GetShout();
-        CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
-    }
-
-    public static void FillSkyrimMajorRecord()
-    {
-        var fileName = ConfigHandler.GetCsvDirectory() + "\\SkyrimMajorRecord.csv";
-        var dataTable = GetSkyrimData.GetSkyrimMajorRecord();
         CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
     }
 
