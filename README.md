@@ -13,5 +13,4 @@ Planned:
 - Skyrim to xml
 - Other Bethesda Mods to all types
 - Good UI
-- actual exe so it can be used by non devs
 
