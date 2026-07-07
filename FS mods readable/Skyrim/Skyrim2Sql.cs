@@ -160,7 +160,7 @@ public static class Skyrim2Sql
         FillWordOfPower();
         FillWorldspace();
     }
-    
+
     public static void FillAcousticSpace()
     {
         const string tableName = "[dbo].[AcousticSpace]";
@@ -1352,7 +1352,7 @@ public static class Skyrim2Sql
         CreateAndFillTables.CreateTable(tableName, dataTable);
         CreateAndFillTables.FillTable(tableName, dataTable);
     }
-    
+
     public static void FillWeapons()
     {
         const string tableName = "[dbo].[Weapon]";

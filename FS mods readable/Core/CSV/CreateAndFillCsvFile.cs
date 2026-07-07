@@ -23,7 +23,7 @@ public static class CreateAndFillCsvFile
             Export2Csv(fileName, dataTable);
         }
     }
-    
+
     private static void Export2Csv(string destFilePath, DataTable dataTable)
     {
         StreamWriter? streamWriter = null;
@@ -52,5 +52,4 @@ public static class CreateAndFillCsvFile
             streamWriter?.Close();
         }
     }
-
 }

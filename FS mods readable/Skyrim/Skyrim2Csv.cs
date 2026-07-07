@@ -58,15 +58,15 @@ public static class Skyrim2Csv
         FillHair();
         FillHazard();
         FillHeadPart();
-	    FillIdleAnimation();
+        FillIdleAnimation();
         FillIdleMarker();
-	    FillImageSpace();
+        FillImageSpace();
         FillImageSpaceAdapter();
-	    FillImpact();
+        FillImpact();
         FillImpactDataSet();
         FillIngestible();
         FillIngredient();
-	    FillKey();
+        FillKey();
         FillKeyword();
         FillLandscape();
         FillLandscapeTexture();
@@ -107,7 +107,7 @@ public static class Skyrim2Csv
         FillScroll();
         FillShaderParticleGeometry();
         FillShout();
-	    FillSoulGem();
+        FillSoulGem();
         FillSoundCategory();
         FillSoundDescriptor();
         FillSoundMarker();
@@ -126,14 +126,14 @@ public static class Skyrim2Csv
         FillWordOfPower();
         FillWorldspace();
     }
-    
+
     public static void FillAcousticSpace()
     {
         var fileName = ConfigHandler.GetCsvDirectory() + "\\AcousticSpace.csv";
         var dataTable = GetSkyrimData.GetAcousticSpace();
         CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
     }
-    
+
     public static void FillActionRecord()
     {
         var fileName = ConfigHandler.GetCsvDirectory() + "\\ActionRecord.csv";
@@ -1169,7 +1169,7 @@ public static class Skyrim2Csv
         var dataTable = GetSkyrimData.GetWater();
         CreateAndFillCsvFile.CreateAndFill(fileName, dataTable);
     }
-    
+
     public static void FillWeapons()
     {
         var fileName = ConfigHandler.GetCsvDirectory() + "\\Weapon.csv";

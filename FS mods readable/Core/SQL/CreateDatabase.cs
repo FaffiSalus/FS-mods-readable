@@ -5,7 +5,8 @@ public static class CreateDatabase
     public static void Create()
     {
         var db = ConfigHandler.GetSqlDatabaseName();
-        var myConn = new SqlConnection ("Server=" + ConfigHandler.GetSqlServerName() + ";Integrated security=SSPI;database=master");
+        var myConn = new SqlConnection("Server=" + ConfigHandler.GetSqlServerName() +
+                                       ";Integrated security=SSPI;database=master");
         var str = "CREATE DATABASE " + db + " ON PRIMARY " +
                   "(NAME = " + db + ", " +
                   "FILENAME = '" + ConfigHandler.GetSQLDirectory_Data() + "\\" + db + "Data.mdf', " +
@@ -29,10 +30,7 @@ public static class CreateDatabase
         }
         finally
         {
-            if (myConn.State == ConnectionState.Open)
-            {
-                myConn.Close();
-            }
+            if (myConn.State == ConnectionState.Open) myConn.Close();
         }
     }
 }

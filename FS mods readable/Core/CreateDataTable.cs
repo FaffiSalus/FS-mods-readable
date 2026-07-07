@@ -2,7 +2,8 @@ namespace FS_mods_readable.Core;
 
 public static class CreateDataTable
 {
-    public static DataTable CreateTable(IEnumerable<IMajorRecordGetter> recordGetters, bool trimLength = false, int maxLength = 0)
+    public static DataTable CreateTable(IEnumerable<IMajorRecordGetter> recordGetters, bool trimLength = false,
+        int maxLength = 0)
     {
         var dataTable = new DataTable();
         var firstRun = true;
@@ -19,6 +20,7 @@ public static class CreateDataTable
                     firstRun = false;
                 }
             }
+
             var i = 0;
             var max = rec.GetType().GetProperties().Length;
             var fieldData = new string?[max];
@@ -26,18 +28,17 @@ public static class CreateDataTable
             {
                 var value = field.GetValue(rec)?.ToString();
                 if (trimLength && value != null && value.Length > maxLength && maxLength > 0)
-                {
                     value = value[..maxLength];
-                        
-                }
                 fieldData[i] = value;
                 i++;
             }
+
             dataTable.Rows.Add(fieldData);
         }
+
         return dataTable;
     }
-    
+
     public static List<DataTable> SplitTable(DataTable originalTable, int batchSize)
     {
         var tables = new List<DataTable>();
@@ -61,6 +62,7 @@ public static class CreateDataTable
                 i = 0;
             }
         }
+
         return tables;
     }
 }

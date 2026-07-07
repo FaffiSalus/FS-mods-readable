@@ -12,7 +12,7 @@ public partial class Form1 : Form
     {
         InitializeComponent();
         ConfigHandler.SetLogDirectory(Directory.GetCurrentDirectory());
-        ConfigHandler.SetLogFileName("log_" +  DateTime.Now.ToFileTimeUtc() + ".txt");
+        ConfigHandler.SetLogFileName("log_" + DateTime.Now.ToFileTimeUtc() + ".txt");
         LogHandler.CreateLogFile();
         InitializeValues();
         _folderBrowserDialog1 = new FolderBrowserDialog();
@@ -24,7 +24,7 @@ public partial class Form1 : Form
         LogFileName.Text = ConfigHandler.GetLogFileName();
         SqlDataFileDirectory.Text = ConfigHandler.GetSQLDirectory_Data();
         SqlLogFileDirectory.Text = ConfigHandler.GetSQLDirectory_Log();
-        SqlServerName.Text  = ConfigHandler.GetSqlServerName();
+        SqlServerName.Text = ConfigHandler.GetSqlServerName();
         SqlDatabaseName.Text = ConfigHandler.GetSqlDatabaseName();
         CsvDirectory.Text = ConfigHandler.GetCsvDirectory();
         CsvBatchLimit.Text = ConfigHandler.GetCsvBatchLimit();
@@ -115,35 +115,35 @@ public partial class Form1 : Form
 
     private void btnChooseSqlDataDirectory_Click(object sender, EventArgs e)
     {
-        var dir =  ChooseDirectory();
+        var dir = ChooseDirectory();
         ConfigHandler.SetSQLDirectory_Data(dir);
         SqlDataFileDirectory.Text = dir;
     }
 
     private void btnChooseSqlLogDirectory_Click(object sender, EventArgs e)
     {
-        var  dir =  ChooseDirectory();
+        var dir = ChooseDirectory();
         ConfigHandler.SetSQLDirectory_Log(dir);
         SqlLogFileDirectory.Text = dir;
     }
 
     private void btnChooseCsvDirectory_Click(object sender, EventArgs e)
     {
-        var dir =  ChooseDirectory();
+        var dir = ChooseDirectory();
         ConfigHandler.SetCsvDirectory(dir);
         CsvDirectory.Text = dir;
     }
 
     private void btnChooseExcelDirectory_Click(object sender, EventArgs e)
     {
-        var dir =  ChooseDirectory();
+        var dir = ChooseDirectory();
         ConfigHandler.SetExcelDirectory(dir);
         ExcelDirectory.Text = dir;
     }
 
     private void btnChooseLogDirectory_Click(object sender, EventArgs e)
     {
-        var dir =  ChooseDirectory();
+        var dir = ChooseDirectory();
         ConfigHandler.SetLogDirectory(dir);
         LogFileDirectory.Text = dir;
     }

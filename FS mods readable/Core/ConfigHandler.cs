@@ -13,7 +13,7 @@ public static class ConfigHandler
     {
         WriteToConfig("LogDirectory", logDirectory);
     }
-    
+
     public static string? GetLogFileName()
     {
         return ReadFromConfig("LogFileName");
@@ -123,8 +123,8 @@ public static class ConfigHandler
     {
         WriteToConfig("ExcelRowLimit", excelRowLimit);
     }
-    
-    
+
+
     private static string? ReadFromConfig(string nodeName)
     {
         var doc = new XmlDocument();
@@ -132,10 +132,9 @@ public static class ConfigHandler
         var node = doc.SelectSingleNode("/Config/" + nodeName);
         return node.InnerText;
     }
-    
+
     private static void WriteToConfig(string nodeName, string value)
     {
-        
         var doc = new XmlDocument();
         doc.Load(Directory.GetCurrentDirectory() + "\\Config\\config.xml");
         var node = doc.SelectSingleNode("/Config/" + nodeName);
