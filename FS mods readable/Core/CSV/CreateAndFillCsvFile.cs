@@ -6,11 +6,13 @@ public static class CreateAndFillCsvFile
 {
     public static void CreateAndFill(string fileName, DataTable dataTable)
     {
-        if (dataTable.Rows.Count > 10000)
+        var maxBatch = int.Parse(ConfigHandler.GetCsvBatchLimit() ?? "0");
+        if (dataTable.Rows.Count > maxBatch && maxBatch > 0)
         {
-            List<DataTable> tables = CreateDataTable.SplitTable(dataTable, 10000);
+            LogHandler.WriteToLog(dataTable.TableName + " Records exceed csv batch limit. DataTable split.");
+            var tables = CreateDataTable.SplitTable(dataTable, maxBatch);
             dataTable.Clear();
-            foreach (DataTable table in tables)
+            foreach (var table in tables)
             {
                 Export2Csv(fileName, table);
                 table.Clear();
@@ -22,28 +24,32 @@ public static class CreateAndFillCsvFile
         }
     }
     
-    private static bool Export2Csv(string destFilePath, DataTable dataTable)
+    private static void Export2Csv(string destFilePath, DataTable dataTable)
     {
-        StreamWriter streamWriter = (StreamWriter) null;
+        StreamWriter? streamWriter = null;
         try
         {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(string.Join(",", (IEnumerable<string>) dataTable.Columns.Cast<DataColumn>().Select<DataColumn, string>((System.Func<DataColumn, string>) (column => $"\"{column.ColumnName}\"")).ToList<string>()) + "\n");
-            dataTable.AsEnumerable().ToList<DataRow>().ForEach((Action<DataRow>) (row => stringBuilder.Append(string.Join(",", (IEnumerable<string>) ((IEnumerable<object>) row.ItemArray).Select<object, string>((System.Func<object, string>) (item => $"\"{item?.ToString()}\"")).ToList<string>()) + "\n")));
-            string str = stringBuilder.ToString();
-            streamWriter = new StreamWriter((Stream) new FileStream(destFilePath, FileMode.Append, FileAccess.Write));
+            var stringBuilder = new StringBuilder();
+            stringBuilder.Append(string.Join(",",
+                dataTable.Columns.Cast<DataColumn>().Select<DataColumn, string>(column => $"\"{column.ColumnName}\"")
+                    .ToList()) + "\n");
+            dataTable.AsEnumerable().ToList().ForEach((Action<DataRow>)(row =>
+                stringBuilder.Append(string.Join(",",
+                    row.ItemArray!.Select<object, string>(item => $"\"{item}\"").ToList()) + "\n")));
+            var str = stringBuilder.ToString();
+            streamWriter = new StreamWriter(new FileStream(destFilePath, FileMode.Append, FileAccess.Write));
             streamWriter.Write(str);
-            return true;
+            LogHandler.WriteToLog(dataTable.Rows.Count + " Rows written to " + dataTable.TableName);
         }
         catch (Exception ex)
         {
-            throw ex;
+            LogHandler.WriteToLog(ex.Message);
         }
         finally
         {
-            streamWriter.Flush();
-            streamWriter.Dispose();
-            streamWriter.Close();
+            streamWriter?.Flush();
+            streamWriter?.Dispose();
+            streamWriter?.Close();
         }
     }
 

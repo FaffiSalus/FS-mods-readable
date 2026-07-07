@@ -2,29 +2,30 @@ namespace FS_mods_readable.Core.SQL;
 
 public static class CreateDatabase
 {
-    public static void Create(string server, string db, string dir)
+    public static void Create()
     {
-        SqlConnection myConn = new SqlConnection ("Server=" + server + ";Integrated security=SSPI;database=master");
-        string str = "CREATE DATABASE " + db + " ON PRIMARY " +
-                      "(NAME = " + db + ", " +
-                      "FILENAME = '" + dir + "\\" + db + "Data.mdf', " +
-                      "SIZE = 2GB, MAXSIZE = 10GB, FILEGROWTH = 10%)" +
-                      "LOG ON (NAME = " + db + "_Log, " +
-                      "FILENAME = '" + dir + "\\" + db + "Log.ldf', " +
-                      "SIZE = 1GB, " +
-                      "MAXSIZE = 5GB, " +
-                      "FILEGROWTH = 10%)";
+        var db = ConfigHandler.GetSqlDatabaseName();
+        var myConn = new SqlConnection ("Server=" + ConfigHandler.GetSqlServerName() + ";Integrated security=SSPI;database=master");
+        var str = "CREATE DATABASE " + db + " ON PRIMARY " +
+                  "(NAME = " + db + ", " +
+                  "FILENAME = '" + ConfigHandler.GetSQLDirectory_Data() + "\\" + db + "Data.mdf', " +
+                  "SIZE = 2GB, MAXSIZE = 10GB, FILEGROWTH = 10%)" +
+                  "LOG ON (NAME = " + db + "_Log, " +
+                  "FILENAME = '" + ConfigHandler.GetSQLDirectory_Log() + "\\" + db + "Log.ldf', " +
+                  "SIZE = 1GB, " +
+                  "MAXSIZE = 5GB, " +
+                  "FILEGROWTH = 10%)";
 
-        SqlCommand myCommand = new SqlCommand(str, myConn);
+        using var myCommand = new SqlCommand(str, myConn);
         try
         {
             myConn.Open();
             myCommand.ExecuteNonQuery();
-            MessageBox.Show("DataBase is Created Successfully", "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LogHandler.WriteToLog("DataBase " + db + " is Created Successfully");
         }
-        catch (System.Exception ex)
+        catch (Exception ex)
         {
-            MessageBox.Show(ex.ToString(), "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LogHandler.WriteToLog(ex.Message);
         }
         finally
         {

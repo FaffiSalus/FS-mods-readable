@@ -10,6 +10,7 @@ public static class CreateDataTable
         {
             if (firstRun)
             {
+                dataTable.TableName = rec.GetType().Name;
                 foreach (var field in rec.GetType().GetProperties())
                 {
                     using var dataColumn = new DataColumn(field.Name);
@@ -24,7 +25,7 @@ public static class CreateDataTable
             foreach (var field in rec.GetType().GetProperties())
             {
                 var value = field.GetValue(rec)?.ToString();
-                if (trimLength && value != null && value.Length > maxLength)
+                if (trimLength && value != null && value.Length > maxLength && maxLength > 0)
                 {
                     value = value[..maxLength];
                         
@@ -50,6 +51,7 @@ public static class CreateDataTable
             newRow.ItemArray = row.ItemArray;
             newDt.Rows.Add(newRow);
             i++;
+            // ReSharper disable once InvertIf
             if (i == batchSize)
             {
                 tables.Add(newDt);

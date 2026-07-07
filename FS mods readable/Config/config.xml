@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+    <LogDirectory></LogDirectory>
+    <LogFileName></LogFileName>
+    <SQLDirectory_Data></SQLDirectory_Data>
+    <SQLDirectory_Log></SQLDirectory_Log>
+    <SQLServerName></SQLServerName>
+    <SQLDatabaseName></SQLDatabaseName>
+    <CSVDirectory></CSVDirectory>
+    <CSVBatchLimit>10000</CSVBatchLimit>
+    <ExcelDirectory></ExcelDirectory>
+    <ExcelFileName></ExcelFileName>
+    <ExcelCellLimit>32767</ExcelCellLimit>
+    <ExcelRowLimit>1000000</ExcelRowLimit>        
+</Config>
+
+
+
+

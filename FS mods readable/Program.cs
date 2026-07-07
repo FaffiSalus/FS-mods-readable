@@ -1,6 +1,8 @@
+using FS_mods_readable.UI;
+
 namespace FS_mods_readable;
 
-static class Program
+public static class Program
 {
     /// <summary>
     ///  The main entry point for the application.
@@ -10,8 +12,7 @@ static class Program
     {
         // To customize application configuration such as set high DPI settings or default font,
         // see https://aka.ms/applicationconfiguration.
-        ExcelPackage.License.SetNonCommercialOrganization("FaffiSalus");
-        File.Delete(Directory.GetCurrentDirectory() + "\\log.txt");
+        ExcelPackage.License.SetNonCommercialOrganization("Private");
         ApplicationConfiguration.Initialize();
         Application.Run(new Form1());
     }
