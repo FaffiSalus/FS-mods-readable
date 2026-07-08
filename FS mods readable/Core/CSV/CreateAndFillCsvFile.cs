@@ -4,8 +4,9 @@ namespace FS_mods_readable.Core.CSV;
 
 public static class CreateAndFillCsvFile
 {
-    public static void CreateAndFill(string fileName, DataTable dataTable)
+    public static void CreateAndFill(DataTable dataTable)
     {
+        var dir = ConfigHandler.GetCsvDirectory();
         var maxBatch = int.Parse(ConfigHandler.GetCsvBatchLimit() ?? "0");
         if (dataTable.Rows.Count > maxBatch && maxBatch > 0)
         {
@@ -14,13 +15,13 @@ public static class CreateAndFillCsvFile
             dataTable.Clear();
             foreach (var table in tables)
             {
-                Export2Csv(fileName, table);
+                Export2Csv(dir + "\\" + table.TableName, table);
                 table.Clear();
             }
         }
         else
         {
-            Export2Csv(fileName, dataTable);
+            Export2Csv(dir + "\\" + dataTable.TableName, dataTable);
         }
     }
 

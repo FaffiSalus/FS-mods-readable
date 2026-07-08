@@ -14,6 +14,9 @@ public partial class Form1 : Form
         ConfigHandler.SetLogDirectory(Directory.GetCurrentDirectory());
         ConfigHandler.SetLogFileName("log_" + DateTime.Now.ToFileTimeUtc() + ".txt");
         LogHandler.CreateLogFile();
+        ConfigHandler.SetSql(false.ToString());
+        ConfigHandler.SetCsv(false.ToString());
+        ConfigHandler.SetExcel(false.ToString());
         InitializeValues();
         _folderBrowserDialog1 = new FolderBrowserDialog();
     }
@@ -30,6 +33,9 @@ public partial class Form1 : Form
         CsvBatchLimit.Text = ConfigHandler.GetCsvBatchLimit();
         ExcelDirectory.Text = ConfigHandler.GetExcelDirectory();
         ExcelFileName.Text = ConfigHandler.GetExcelFileName();
+        SqlCheckBox.Checked = bool.Parse(ConfigHandler.GetSql()!);
+        CsvCheckBox.Checked = bool.Parse(ConfigHandler.GetCsv()!);
+        ExcelCheckBox.Checked = bool.Parse(ConfigHandler.GetExcel()!);
     }
 
     private string ChooseDirectory()
@@ -78,24 +84,9 @@ public partial class Form1 : Form
         CreateDatabase.Create();
     }
 
-    private void btnFillAllTables_Click(object sender, EventArgs e)
-    {
-        Skyrim2Sql.FillAllTables();
-    }
-
-    private void CsvDirectory_TextChanged(object sender, EventArgs e)
-    {
-        ConfigHandler.SetCsvDirectory(CsvDirectory.Text);
-    }
-
     private void CsvBatchLimit_TextChanged(object sender, EventArgs e)
     {
         ConfigHandler.SetCsvBatchLimit(CsvBatchLimit.Text);
-    }
-
-    private void btnCreateCsvFiles_Click(object sender, EventArgs e)
-    {
-        Skyrim2Csv.FillAllFiles();
     }
 
     private void ExcelDirectory_TextChanged(object sender, EventArgs e)
@@ -106,11 +97,6 @@ public partial class Form1 : Form
     private void ExcelFileName_TextChanged(object sender, EventArgs e)
     {
         ConfigHandler.SetExcelFileName(ExcelFileName.Text);
-    }
-
-    private void btnCreateExcel_Click(object sender, EventArgs e)
-    {
-        Skyrim2Excel.FillAllFiles();
     }
 
     private void btnChooseSqlDataDirectory_Click(object sender, EventArgs e)
@@ -146,5 +132,38 @@ public partial class Form1 : Form
         var dir = ChooseDirectory();
         ConfigHandler.SetLogDirectory(dir);
         LogFileDirectory.Text = dir;
+    }
+
+    private void btnExport_Click(object sender, EventArgs e)
+    {
+        MessageBox.Show("Starting");
+        GetSkyrimDataForModlist.GetAll();
+        MessageBox.Show("Done");
+    }
+
+    private void SqlCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        ConfigHandler.SetSql(SqlCheckBox.Checked.ToString());
+
+        SqlDatabaseName.ReadOnly = !SqlCheckBox.Checked;
+        SqlDataFileDirectory.ReadOnly = !SqlCheckBox.Checked;
+        SqlLogFileDirectory.ReadOnly = !SqlCheckBox.Checked;
+        SqlServerName.ReadOnly = !SqlCheckBox.Checked;
+    }
+
+    private void CsvCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        ConfigHandler.SetCsv(CsvCheckBox.Checked.ToString());
+
+        CsvBatchLimit.ReadOnly = !CsvCheckBox.Checked;
+        CsvDirectory.ReadOnly = !CsvCheckBox.Checked;
+    }
+
+    private void ExcelCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        ConfigHandler.SetExcel(ExcelCheckBox.Checked.ToString());
+
+        ExcelDirectory.ReadOnly = !ExcelCheckBox.Checked;
+        ExcelFileName.ReadOnly = !ExcelCheckBox.Checked;
     }
 }

@@ -124,6 +124,36 @@ public static class ConfigHandler
         WriteToConfig("ExcelRowLimit", excelRowLimit);
     }
 
+    public static string? GetSql()
+    {
+        return ReadFromConfig("SQL");
+    }
+
+    public static void SetSql(string sql)
+    {
+        WriteToConfig("SQL", sql);
+    }
+
+    public static string? GetCsv()
+    {
+        return ReadFromConfig("CSV");
+    }
+
+    public static void SetCsv(string csv)
+    {
+        WriteToConfig("CSV", csv);
+    }
+
+    public static string? GetExcel()
+    {
+        return ReadFromConfig("Excel");
+    }
+
+    public static void SetExcel(string excel)
+    {
+        WriteToConfig("Excel", excel);
+    }
+
 
     private static string? ReadFromConfig(string nodeName)
     {
