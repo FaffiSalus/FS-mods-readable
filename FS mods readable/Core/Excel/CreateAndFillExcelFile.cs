@@ -4,8 +4,9 @@ namespace FS_mods_readable.Core.Excel;
 
 public static class CreateAndFillExcelFile
 {
-    public static void CreateAndFill(string fileName, string sheetName, DataTable dataTable)
+    public static void CreateAndFill(DataTable dataTable)
     {
+        var fileName = ConfigHandler.GetExcelFileName() + "\\" + ConfigHandler.GetExcelFileName() + ".xlsx";
         var maxRows = int.Parse(ConfigHandler.GetExcelRowLimit() ?? "0");
         if (dataTable.Rows.Count > maxRows && maxRows > 0)
         {
@@ -14,13 +15,13 @@ public static class CreateAndFillExcelFile
             var i = 0;
             foreach (var table in tables)
             {
-                Export2Excel(fileName, sheetName + "_" + i, table);
+                Export2Excel(fileName, table.TableName + "_" + i, table);
                 i++;
             }
         }
         else
         {
-            Export2Excel(fileName, sheetName, dataTable);
+            Export2Excel(fileName, dataTable.TableName, dataTable);
         }
     }
 

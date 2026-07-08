@@ -12,6 +12,9 @@
     <ExcelFileName></ExcelFileName>
     <ExcelCellLimit>32767</ExcelCellLimit>
     <ExcelRowLimit>1000000</ExcelRowLimit>
+    <SQL>False</SQL>
+    <CSV>False</CSV>
+    <Excel>False</Excel>
 </Config>
 
 

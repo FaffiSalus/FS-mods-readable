@@ -2,8 +2,7 @@ namespace FS_mods_readable.Core;
 
 public static class CreateDataTable
 {
-    public static DataTable CreateTable(IEnumerable<IMajorRecordGetter> recordGetters, bool trimLength = false,
-        int maxLength = 0)
+    public static DataTable CreateTable(IEnumerable<IMajorRecordGetter> recordGetters)
     {
         var dataTable = new DataTable();
         var firstRun = true;
@@ -11,7 +10,7 @@ public static class CreateDataTable
         {
             if (firstRun)
             {
-                dataTable.TableName = rec.GetType().Name;
+                dataTable.TableName = rec.GetType().Name[..^13];
                 foreach (var field in rec.GetType().GetProperties())
                 {
                     if (field.Name == "ExportingExtraNam3") continue;
@@ -29,8 +28,6 @@ public static class CreateDataTable
             {
                 if (field.Name == "ExportingExtraNam3") continue;
                 var value = field.GetValue(rec)?.ToString();
-                if (trimLength && value != null && value.Length > maxLength && maxLength > 0)
-                    value = value[..maxLength];
                 fieldData[i] = value;
                 i++;
             }
@@ -66,5 +63,27 @@ public static class CreateDataTable
         }
 
         return tables;
+    }
+
+    private static List<Type> GetTypes(IEnumerable<IMajorRecordGetter> recordGetters)
+    {
+        var types = new List<Type>();
+        foreach (var recordGetter in recordGetters)
+        {
+            if (types.Contains(recordGetter.GetType())) continue;
+            types.Add(recordGetter.GetType());
+        }
+
+        return types;
+    }
+
+    public static List<DataTable> CreateDataTables(IEnumerable<IMajorRecordGetter> recordGetters)
+    {
+        var dataTables = new List<DataTable>();
+        var types = GetTypes(recordGetters);
+        foreach (var type in types)
+            dataTables.Add(CreateTable(recordGetters.Select(x => x).Where(x => x.GetType() == type)));
+
+        return dataTables;
     }
 }

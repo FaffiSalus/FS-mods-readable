@@ -2,10 +2,11 @@ namespace FS_mods_readable.Core.SQL;
 
 public static class CreateAndFillTables
 {
-    public static void CreateTable(string tableName, DataTable table)
+    public static void CreateTable(DataTable table)
     {
         using var conn = new SqlConnection("Server=" + ConfigHandler.GetSqlServerName() +
                                            ";Integrated security=SSPI;database=" + ConfigHandler.GetSqlDatabaseName());
+        var tableName = "[dbo].[" + table.TableName + "]";
         var script = GetCreateScript(tableName, table);
         using var myCommand = new SqlCommand(script, conn);
         var logMessage = "";
@@ -26,11 +27,12 @@ public static class CreateAndFillTables
         }
     }
 
-    public static void FillTable(string tableName, DataTable table)
+    public static void FillTable(DataTable table)
     {
         using var dbConnection = new SqlConnection("Server=" + ConfigHandler.GetSqlServerName() +
                                                    ";Integrated security=SSPI;database=" +
                                                    ConfigHandler.GetSqlDatabaseName());
+        var tableName = "[dbo].[" + table.TableName + "]";
         dbConnection.Open();
         using var s = new SqlBulkCopy(dbConnection);
         s.DestinationTableName = tableName;
