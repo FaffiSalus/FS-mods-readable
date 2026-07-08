@@ -69,7 +69,7 @@ public static class ConfigHandler
         return ReadFromConfig("CSVDirectory");
     }
 
-    public static void SetCsvDirectory(string csvDirectory)
+    public static void SetCsvDirectory(string? csvDirectory)
     {
         WriteToConfig("CSVDirectory", csvDirectory);
     }
@@ -99,7 +99,7 @@ public static class ConfigHandler
         return ReadFromConfig("ExcelFileName");
     }
 
-    public static void SetExcelFileName(string excelFileName)
+    public static void SetExcelFileName(string? excelFileName)
     {
         WriteToConfig("ExcelFileName", excelFileName);
     }

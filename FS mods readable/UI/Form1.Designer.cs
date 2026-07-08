@@ -31,9 +31,13 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-        openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+        getDirectoryDialog = new System.Windows.Forms.OpenFileDialog();
         tabControl1 = new System.Windows.Forms.TabControl();
-        SQL = new System.Windows.Forms.TabPage();
+        ExportSettings = new System.Windows.Forms.TabPage();
+        ModSelectionListBox = new System.Windows.Forms.ListBox();
+        btnSelectMods = new System.Windows.Forms.Button();
+        label12 = new System.Windows.Forms.Label();
+        comboBox1 = new System.Windows.Forms.ComboBox();
         ExcelCheckBox = new System.Windows.Forms.CheckBox();
         CsvCheckBox = new System.Windows.Forms.CheckBox();
         SqlCheckBox = new System.Windows.Forms.CheckBox();
@@ -60,6 +64,7 @@ partial class Form1
         SqlLogFileDirectory = new System.Windows.Forms.TextBox();
         SqlDatabaseName = new System.Windows.Forms.TextBox();
         SqlDataFileDirectory = new System.Windows.Forms.TextBox();
+        SelectedModsLabel = new System.Windows.Forms.Label();
         AdvancedSettings = new System.Windows.Forms.TabPage();
         btnChooseLogDirectory = new System.Windows.Forms.Button();
         btnCreateLogfile = new System.Windows.Forms.Button();
@@ -67,64 +72,107 @@ partial class Form1
         label1 = new System.Windows.Forms.Label();
         LogFileName = new System.Windows.Forms.TextBox();
         LogFileDirectory = new System.Windows.Forms.TextBox();
+        getModsDialog = new System.Windows.Forms.OpenFileDialog();
         tabControl1.SuspendLayout();
-        SQL.SuspendLayout();
+        ExportSettings.SuspendLayout();
         AdvancedSettings.SuspendLayout();
         SuspendLayout();
         // 
-        // openFileDialog1
+        // getDirectoryDialog
         // 
-        openFileDialog1.FileName = "openFileDialog1";
+        getDirectoryDialog.FileName = "openFileDialog1";
         // 
         // tabControl1
         // 
-        tabControl1.Controls.Add(SQL);
+        tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        tabControl1.Controls.Add(ExportSettings);
         tabControl1.Controls.Add(AdvancedSettings);
         tabControl1.Location = new System.Drawing.Point(12, 12);
         tabControl1.Name = "tabControl1";
         tabControl1.SelectedIndex = 0;
-        tabControl1.Size = new System.Drawing.Size(789, 534);
+        tabControl1.Size = new System.Drawing.Size(784, 502);
         tabControl1.TabIndex = 10;
         // 
-        // SQL
+        // ExportSettings
         // 
-        SQL.Controls.Add(ExcelCheckBox);
-        SQL.Controls.Add(CsvCheckBox);
-        SQL.Controls.Add(SqlCheckBox);
-        SQL.Controls.Add(label11);
-        SQL.Controls.Add(btnChooseExcelDirectory);
-        SQL.Controls.Add(btnChooseCsvDirectory);
-        SQL.Controls.Add(btnExport);
-        SQL.Controls.Add(btnChooseSqlLogDirectory);
-        SQL.Controls.Add(ExcelFileName);
-        SQL.Controls.Add(label9);
-        SQL.Controls.Add(ExcelDirectory);
-        SQL.Controls.Add(btnChooseSqlDataDirectory);
-        SQL.Controls.Add(label10);
-        SQL.Controls.Add(label7);
-        SQL.Controls.Add(CsvBatchLimit);
-        SQL.Controls.Add(CsvDirectory);
-        SQL.Controls.Add(btnCreateSqlDatabase);
-        SQL.Controls.Add(label8);
-        SQL.Controls.Add(label6);
-        SQL.Controls.Add(label5);
-        SQL.Controls.Add(label4);
-        SQL.Controls.Add(label3);
-        SQL.Controls.Add(SqlServerName);
-        SQL.Controls.Add(SqlLogFileDirectory);
-        SQL.Controls.Add(SqlDatabaseName);
-        SQL.Controls.Add(SqlDataFileDirectory);
-        SQL.Location = new System.Drawing.Point(4, 24);
-        SQL.Name = "SQL";
-        SQL.Padding = new System.Windows.Forms.Padding(3);
-        SQL.Size = new System.Drawing.Size(781, 506);
-        SQL.TabIndex = 0;
-        SQL.Text = "SQL";
-        SQL.UseVisualStyleBackColor = true;
+        ExportSettings.Controls.Add(ModSelectionListBox);
+        ExportSettings.Controls.Add(btnSelectMods);
+        ExportSettings.Controls.Add(label12);
+        ExportSettings.Controls.Add(comboBox1);
+        ExportSettings.Controls.Add(ExcelCheckBox);
+        ExportSettings.Controls.Add(CsvCheckBox);
+        ExportSettings.Controls.Add(SqlCheckBox);
+        ExportSettings.Controls.Add(label11);
+        ExportSettings.Controls.Add(btnChooseExcelDirectory);
+        ExportSettings.Controls.Add(btnChooseCsvDirectory);
+        ExportSettings.Controls.Add(btnExport);
+        ExportSettings.Controls.Add(btnChooseSqlLogDirectory);
+        ExportSettings.Controls.Add(ExcelFileName);
+        ExportSettings.Controls.Add(label9);
+        ExportSettings.Controls.Add(ExcelDirectory);
+        ExportSettings.Controls.Add(btnChooseSqlDataDirectory);
+        ExportSettings.Controls.Add(label10);
+        ExportSettings.Controls.Add(label7);
+        ExportSettings.Controls.Add(CsvBatchLimit);
+        ExportSettings.Controls.Add(CsvDirectory);
+        ExportSettings.Controls.Add(btnCreateSqlDatabase);
+        ExportSettings.Controls.Add(label8);
+        ExportSettings.Controls.Add(label6);
+        ExportSettings.Controls.Add(label5);
+        ExportSettings.Controls.Add(label4);
+        ExportSettings.Controls.Add(label3);
+        ExportSettings.Controls.Add(SqlServerName);
+        ExportSettings.Controls.Add(SqlLogFileDirectory);
+        ExportSettings.Controls.Add(SqlDatabaseName);
+        ExportSettings.Controls.Add(SqlDataFileDirectory);
+        ExportSettings.Controls.Add(SelectedModsLabel);
+        ExportSettings.Location = new System.Drawing.Point(4, 24);
+        ExportSettings.Name = "ExportSettings";
+        ExportSettings.Padding = new System.Windows.Forms.Padding(3);
+        ExportSettings.Size = new System.Drawing.Size(776, 474);
+        ExportSettings.TabIndex = 0;
+        ExportSettings.Text = "Export Settings";
+        ExportSettings.UseVisualStyleBackColor = true;
+        // 
+        // ModSelectionListBox
+        // 
+        ModSelectionListBox.FormattingEnabled = true;
+        ModSelectionListBox.Location = new System.Drawing.Point(517, 77);
+        ModSelectionListBox.Name = "ModSelectionListBox";
+        ModSelectionListBox.Size = new System.Drawing.Size(241, 349);
+        ModSelectionListBox.TabIndex = 20;
+        // 
+        // btnSelectMods
+        // 
+        btnSelectMods.Location = new System.Drawing.Point(599, 432);
+        btnSelectMods.Name = "btnSelectMods";
+        btnSelectMods.Size = new System.Drawing.Size(92, 23);
+        btnSelectMods.TabIndex = 22;
+        btnSelectMods.Text = "Select Mods";
+        btnSelectMods.UseVisualStyleBackColor = true;
+        btnSelectMods.Click += btnSelectMods_Click;
+        // 
+        // label12
+        // 
+        label12.Location = new System.Drawing.Point(517, 12);
+        label12.Name = "label12";
+        label12.Size = new System.Drawing.Size(76, 23);
+        label12.TabIndex = 19;
+        label12.Text = "Export Mode";
+        // 
+        // comboBox1
+        // 
+        comboBox1.FormattingEnabled = true;
+        comboBox1.Items.AddRange(new object[] { "Modlist", "Individual Mods" });
+        comboBox1.Location = new System.Drawing.Point(599, 9);
+        comboBox1.Name = "comboBox1";
+        comboBox1.Size = new System.Drawing.Size(121, 23);
+        comboBox1.TabIndex = 18;
+        comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         // 
         // ExcelCheckBox
         // 
-        ExcelCheckBox.Location = new System.Drawing.Point(508, 98);
+        ExcelCheckBox.Location = new System.Drawing.Point(19, 363);
         ExcelCheckBox.Name = "ExcelCheckBox";
         ExcelCheckBox.Size = new System.Drawing.Size(104, 24);
         ExcelCheckBox.TabIndex = 17;
@@ -134,7 +182,7 @@ partial class Form1
         // 
         // CsvCheckBox
         // 
-        CsvCheckBox.Location = new System.Drawing.Point(508, 68);
+        CsvCheckBox.Location = new System.Drawing.Point(19, 333);
         CsvCheckBox.Name = "CsvCheckBox";
         CsvCheckBox.Size = new System.Drawing.Size(104, 24);
         CsvCheckBox.TabIndex = 16;
@@ -144,7 +192,7 @@ partial class Form1
         // 
         // SqlCheckBox
         // 
-        SqlCheckBox.Location = new System.Drawing.Point(508, 38);
+        SqlCheckBox.Location = new System.Drawing.Point(19, 303);
         SqlCheckBox.Name = "SqlCheckBox";
         SqlCheckBox.Size = new System.Drawing.Size(104, 24);
         SqlCheckBox.TabIndex = 15;
@@ -154,7 +202,7 @@ partial class Form1
         // 
         // label11
         // 
-        label11.Location = new System.Drawing.Point(508, 12);
+        label11.Location = new System.Drawing.Point(19, 277);
         label11.Name = "label11";
         label11.Size = new System.Drawing.Size(100, 23);
         label11.TabIndex = 14;
@@ -182,7 +230,7 @@ partial class Form1
         // 
         // btnExport
         // 
-        btnExport.Location = new System.Drawing.Point(508, 144);
+        btnExport.Location = new System.Drawing.Point(19, 393);
         btnExport.Name = "btnExport";
         btnExport.Size = new System.Drawing.Size(85, 23);
         btnExport.TabIndex = 12;
@@ -355,6 +403,14 @@ partial class Form1
         SqlDataFileDirectory.TabIndex = 0;
         SqlDataFileDirectory.TextChanged += SqlDataFileDirectory_TextChanged;
         // 
+        // SelectedModsLabel
+        // 
+        SelectedModsLabel.Location = new System.Drawing.Point(517, 44);
+        SelectedModsLabel.Name = "SelectedModsLabel";
+        SelectedModsLabel.Size = new System.Drawing.Size(100, 23);
+        SelectedModsLabel.TabIndex = 21;
+        SelectedModsLabel.Text = "Selected Mods";
+        // 
         // AdvancedSettings
         // 
         AdvancedSettings.Controls.Add(btnChooseLogDirectory);
@@ -365,7 +421,7 @@ partial class Form1
         AdvancedSettings.Controls.Add(LogFileDirectory);
         AdvancedSettings.Location = new System.Drawing.Point(4, 24);
         AdvancedSettings.Name = "AdvancedSettings";
-        AdvancedSettings.Size = new System.Drawing.Size(781, 506);
+        AdvancedSettings.Size = new System.Drawing.Size(776, 474);
         AdvancedSettings.TabIndex = 3;
         AdvancedSettings.Text = "Advanced Settings";
         AdvancedSettings.UseVisualStyleBackColor = true;
@@ -422,20 +478,38 @@ partial class Form1
         LogFileDirectory.TabIndex = 0;
         LogFileDirectory.TextChanged += LogFileDirectory_TextChanged;
         // 
+        // getModsDialog
+        // 
+        getModsDialog.FileName = "openFileDialog2";
+        getModsDialog.Multiselect = true;
+        getModsDialog.Title = "Select Mods";
+        // 
         // Form1
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(801, 558);
+        ClientSize = new System.Drawing.Size(808, 526);
         Controls.Add(tabControl1);
         Text = "Readable Mods";
         tabControl1.ResumeLayout(false);
-        SQL.ResumeLayout(false);
-        SQL.PerformLayout();
+        ExportSettings.ResumeLayout(false);
+        ExportSettings.PerformLayout();
         AdvancedSettings.ResumeLayout(false);
         AdvancedSettings.PerformLayout();
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.OpenFileDialog getModsDialog;
+
+    private System.Windows.Forms.Button btnSelectMods;
+
+    private System.Windows.Forms.Label label12;
+    private System.Windows.Forms.ListBox ModSelectionListBox;
+    private System.Windows.Forms.Label SelectedModsLabel;
+
+    private System.Windows.Forms.TabPage ExportSettings;
+
+    private System.Windows.Forms.ComboBox comboBox1;
 
     private System.Windows.Forms.CheckBox SqlCheckBox;
     private System.Windows.Forms.CheckBox CsvCheckBox;
@@ -485,7 +559,7 @@ partial class Form1
     private System.Windows.Forms.TabControl tabControl1;
     private System.Windows.Forms.TabPage SQL;
 
-    private System.Windows.Forms.OpenFileDialog openFileDialog1;
+    private System.Windows.Forms.OpenFileDialog getDirectoryDialog;
 
     #endregion
 }

@@ -39,7 +39,7 @@ public static class GetSkyrimDataForModlist
                     CreateAndFillTables.CreateTable(dataTable);
                     CreateAndFillTables.FillTable(dataTable);
                 }
-
+                
                 if (bool.Parse(ConfigHandler.GetCsv()!)) CreateAndFillCsvFile.CreateAndFill(dataTable);
 
                 if (bool.Parse(ConfigHandler.GetExcel()!)) CreateAndFillExcelFile.CreateAndFill(dataTable);

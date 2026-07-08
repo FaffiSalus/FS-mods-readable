@@ -15,13 +15,13 @@ public static class CreateAndFillCsvFile
             dataTable.Clear();
             foreach (var table in tables)
             {
-                Export2Csv(dir + "\\" + table.TableName, table);
+                Export2Csv(dir + "\\" + table.TableName + ".csv", table);
                 table.Clear();
             }
         }
         else
         {
-            Export2Csv(dir + "\\" + dataTable.TableName, dataTable);
+            Export2Csv(dir + "\\" + dataTable.TableName + ".csv", dataTable);
         }
     }
 
