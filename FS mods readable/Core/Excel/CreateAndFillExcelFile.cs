@@ -6,7 +6,7 @@ public static class CreateAndFillExcelFile
 {
     public static void CreateAndFill(DataTable dataTable)
     {
-        var fileName = ConfigHandler.GetExcelFileName() + "\\" + ConfigHandler.GetExcelFileName() + ".xlsx";
+        var fileName = ConfigHandler.GetExcelDirectory() + "\\" + ConfigHandler.GetExcelFileName() + ".xlsx";
         var maxRows = int.Parse(ConfigHandler.GetExcelRowLimit() ?? "0");
         if (dataTable.Rows.Count > maxRows && maxRows > 0)
         {

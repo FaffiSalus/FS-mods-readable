@@ -7,6 +7,8 @@ namespace FS_mods_readable.UI;
 public partial class Form1 : Form
 {
     private readonly FolderBrowserDialog _folderBrowserDialog1;
+    private readonly string[] _mode = ["Mod List", "Individual Mods"];
+    private List<string> _modSelection = [];
 
     public Form1()
     {
@@ -23,6 +25,7 @@ public partial class Form1 : Form
 
     private void InitializeValues()
     {
+        comboBox1.DataSource = _mode;
         LogFileDirectory.Text = ConfigHandler.GetLogDirectory();
         LogFileName.Text = ConfigHandler.GetLogFileName();
         SqlDataFileDirectory.Text = ConfigHandler.GetSQLDirectory_Data();
@@ -36,6 +39,11 @@ public partial class Form1 : Form
         SqlCheckBox.Checked = bool.Parse(ConfigHandler.GetSql()!);
         CsvCheckBox.Checked = bool.Parse(ConfigHandler.GetCsv()!);
         ExcelCheckBox.Checked = bool.Parse(ConfigHandler.GetExcel()!);
+        SelectedModsLabel.Visible = false;
+        ModSelectionListBox.Visible = false;
+        btnSelectMods.Visible = false;
+        getModsDialog.InitialDirectory = GameEnvironment.Typical.Skyrim(SkyrimRelease.SkyrimSE).DataFolderPath;
+        getModsDialog.Filter = "plugin files (*.esp)|*.esp|master files (*.esm)|*.esm";
     }
 
     private string ChooseDirectory()
@@ -137,7 +145,14 @@ public partial class Form1 : Form
     private void btnExport_Click(object sender, EventArgs e)
     {
         MessageBox.Show("Starting");
-        GetSkyrimDataForModlist.GetAll();
+        if (comboBox1.SelectedValue!.Equals(_mode[0]))
+        {
+            GetSkyrimDataForModlist.GetAll();    
+        }
+        else
+        {
+            GetSkyrimDataForSpecificMod.GetAll(_modSelection);
+        }
         MessageBox.Show("Done");
     }
 
@@ -165,5 +180,34 @@ public partial class Form1 : Form
 
         ExcelDirectory.ReadOnly = !ExcelCheckBox.Checked;
         ExcelFileName.ReadOnly = !ExcelCheckBox.Checked;
+    }
+
+    private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (comboBox1.SelectedValue!.Equals(_mode[0]))
+        {
+            SelectedModsLabel.Visible = false;
+            ModSelectionListBox.Visible = false;
+            btnSelectMods.Visible = false;
+        }
+        else
+        {
+            SelectedModsLabel.Visible = true;
+            ModSelectionListBox.Visible = true;
+            btnSelectMods.Visible = true;
+        }
+    }
+
+    private void btnSelectMods_Click(object sender, EventArgs e)
+    {
+        var dr = getModsDialog.ShowDialog();
+        if (dr != DialogResult.OK) return;
+        foreach (var fileName in getModsDialog.SafeFileNames)
+        {
+            _modSelection.Add(fileName);
+            ModSelectionListBox.Items.Add(fileName);
+        }
+
+        ModSelectionListBox.Refresh();
     }
 }
